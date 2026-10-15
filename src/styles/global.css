@@ -5,8 +5,10 @@
 
 /* Giữ nguyên reset của Stitch */
 @layer base {
-  html, body { margin: 0; padding: 0; max-width: 100%; overflow-x: hidden; }
-  body { overscroll-behavior: none; }
+  /* overflow-x: clip (không dùng hidden) — tránh biến body thành scroll container gây khóa cảm ứng cuộn trên mobile */
+  html, body { margin: 0; padding: 0; }
+  html { overflow-x: clip; overscroll-behavior-y: none; }
+  body { max-width: 100%; overflow-x: clip; }
   main > :first-child { margin-top: 0 !important; }
   main > :last-child { margin-bottom: 0 !important; }
   img, svg { max-width: 100%; }

@@ -5,10 +5,10 @@ import { SITE } from '../lib/site';
 
 <PublicLayout
   title="Bia Long Thành (LTB) — Chuyên Phân Phối Bia & Gia Công Bia Craft Uy Tín Tại Long Thành, Đồng Nai"
-  bodyClass="bg-[#faf9f6] font-sans text-[#0e0e0e] antialiased selection:bg-[#B68D2E] selection:text-black overflow-x-hidden"
+  bodyClass="bg-[#faf9f6] font-sans text-[#0e0e0e] antialiased selection:bg-[#B68D2E] selection:text-black"
   active="trang-chu"
 >
-  <div class="min-h-screen w-full bg-[#faf9f6] text-[#0e0e0e] overflow-clip selection:bg-[#B68D2E] selection:text-black max-w-[100vw]">
+  <div class="min-h-screen w-full bg-[#faf9f6] text-[#0e0e0e] overflow-x-clip selection:bg-[#B68D2E] selection:text-black max-w-[100vw]">
     
     <!-- SECTION 1: HERO SHOWCASE (#trang-chu) -->
     <section id="trang-chu" class="relative pt-[72px] lg:pt-[76px] bg-[#0E0E0E] text-[#faf9f6] overflow-hidden">
@@ -577,6 +577,34 @@ import { SITE } from '../lib/site';
             <div class="mt-1 text-[12.5px] leading-[1.6] text-[#6b6b6b]">Tiếp nhận qua điện thoại, Zalo, form web, xác nhận nhanh.</div>
           </div>
         </div>
+      </div>
+
+      <!-- Video: Giới thiệu xưởng gia công bia LTB -->
+      <div class="mt-12 lg:mt-16" data-reveal>
+        <div class="relative rounded-[24px] sm:rounded-[28px] overflow-hidden border border-[#B68D2E]/25 bg-[#0e0e0e] shadow-[0_18px_50px_rgba(182,141,46,0.12)]">
+          <video
+            class="block w-full aspect-video object-cover"
+            src="/videos/ltb-company.mp4"
+            poster="/brand/ref-ol.webp"
+            preload="metadata"
+            autoplay
+            muted
+            loop
+            playsinline
+          ></video>
+          <div class="absolute top-3.5 left-3.5 rounded-full bg-black/75 backdrop-blur-md border border-[#B68D2E]/35 px-3.5 py-1.5 text-[10px] sm:text-[11px] uppercase tracking-[0.14em] font-bold flex items-center gap-2 text-[#D4AA4A] pointer-events-none">
+            <img
+              src="/brand/ref-fA.png"
+              alt=""
+              aria-hidden="true"
+              class="h-4 w-auto object-contain logo-gold-shadow shrink-0"
+            />
+            <span>Giới thiệu xưởng gia công bia LTB</span>
+          </div>
+        </div>
+        <p class="mt-3 text-[12.5px] sm:text-[13px] leading-[1.6] text-[#6b6b6b] text-center">
+          Tham quan xưởng gia công bia craft &amp; kho phân phối của <b class="text-[#8C6B1F]">Công ty TNHH Bia Long Thành</b> — dây chuyền nấu ủ, chiết rót và bảo quản tại Phước Hòa, Long Thành.
+        </p>
       </div>
 
       <!-- Lower part: Partner Brands & Quality Pledges -->
