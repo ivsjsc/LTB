@@ -1,30 +1,30 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 ---
-<BaseLayout title="Xác thực Đại lý | CÔNG TY TNHH BIA LONG THÀNH" bodyClass="bg-surface font-body-md text-body-md text-on-surface antialiased min-h-screen flex items-center justify-center p-gutter">
-<main class="w-full max-w-xl bg-surface-container-lowest p-space-xl rounded border border-outline-variant/40"><div class="flex flex-col w-full">
+<BaseLayout title="Xác thực Đại lý | CÔNG TY TNHH BIA LONG THÀNH" bodyClass="bg-surface font-body-md text-body-md text-on-surface antialiased min-h-screen flex items-center justify-center p-gutter-mobile md:p-gutter">
+<main class="w-full max-w-md lg:max-w-6xl bg-surface-container-lowest rounded-lg overflow-hidden border border-outline-variant/40"><div class="flex flex-col w-full">
 <!-- Top Heritage Corporate Banner -->
-<div class="w-full bg-primary text-on-primary py-space-sm px-gutter flex items-center justify-between rounded-t">
-<div class="flex items-center gap-space-xs text-label-sm font-label-sm tracking-widest text-primary-fixed uppercase">
-<span class="material-symbols-outlined text-[16px] text-secondary-container" style="font-variation-settings: 'FILL' 1;">verified_user</span>
-<span>HỆ THỐNG GIAO DỊCH B2B NỘI BỘ • BIA LONG THÀNH</span>
+<div class="w-full bg-primary text-on-primary py-space-sm px-gutter-mobile lg:px-gutter flex flex-wrap items-center justify-between gap-x-space-md gap-y-1">
+<div class="flex items-center gap-2 text-label-sm font-label-sm tracking-widest text-primary-fixed uppercase min-w-0">
+<span class="material-symbols-outlined text-[16px] text-secondary-container shrink-0" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+<span class="truncate max-w-[210px] sm:max-w-none">Hệ thống giao dịch B2B nội bộ • Bia Long Thành</span>
 </div>
-<div class="flex items-center gap-space-md text-label-sm font-label-sm text-outline-variant">
+<div class="flex items-center gap-space-sm sm:gap-space-md text-label-sm font-label-sm text-outline-variant whitespace-nowrap">
 <span>MST: 3603823707</span>
-<span class="inline-block w-1 h-1 rounded-full bg-outline"></span>
-<span>KHO ĐỒNG NAI: 24/7 HOẠT ĐỘNG</span>
+<span class="inline-block w-1 h-1 rounded-full bg-outline shrink-0"></span>
+<span>Kho Đồng Nai: 24/7 hoạt động</span>
 </div>
 </div>
 <!-- Primary Split Workframe -->
-<div class="grid grid-cols-1 lg:grid-cols-12 bg-surface-container-lowest rounded-b overflow-hidden border border-outline-variant/40">
-<!-- Left Column: Corporate Trust & Logistics Anchor (5 Cols) -->
-<div class="lg:col-span-5 bg-surface-container-low p-gutter lg:p-space-xl flex flex-col justify-between relative overflow-hidden">
+<div class="grid grid-cols-1 lg:grid-cols-12 bg-surface-container-lowest">
+<!-- Left Column: Corporate Trust & Logistics Anchor (5 Cols — desktop only, keeps mobile flow focused) -->
+<div class="hidden lg:flex lg:col-span-5 bg-surface-container-low p-space-xl flex-col justify-between relative overflow-hidden">
 <!-- Decorative Backdrop Overlay -->
 <div class="absolute inset-0 pointer-events-none"></div>
 <div class="relative z-10 flex flex-col">
 <!-- Brand Signature -->
 <div class="flex items-center gap-space-sm mb-space-lg">
-<div class="w-10 h-10 bg-primary-container text-secondary-container flex items-center justify-center rounded">
+<div class="w-10 h-10 bg-primary-container text-secondary-container flex items-center justify-center rounded shrink-0">
 <span class="material-symbols-outlined text-[24px]">sports_bar</span>
 </div>
 <div>
@@ -43,21 +43,21 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 <!-- Metric Badges List -->
 <div class="space-y-space-sm mb-space-lg">
 <div class="flex items-start gap-space-sm p-space-sm bg-surface rounded">
-<span class="material-symbols-outlined text-primary text-[20px] mt-0.5" style="font-variation-settings: 'FILL' 1;">ac_unit</span>
+<span class="material-symbols-outlined text-primary text-[20px] mt-0.5 shrink-0" style="font-variation-settings: 'FILL' 1;">ac_unit</span>
 <div>
 <span class="font-label-md text-label-md text-primary block">Mạng Lưới Chuỗi Lạnh 0°C - 4°C</span>
 <span class="font-body-sm text-body-sm text-on-surface-variant">Đảm bảo trọn vẹn hương vị Keg 20L tươi và bia lon thủ công xuất xưởng.</span>
 </div>
 </div>
 <div class="flex items-start gap-space-sm p-space-sm bg-surface rounded">
-<span class="material-symbols-outlined text-primary text-[20px] mt-0.5" style="font-variation-settings: 'FILL' 1;">speed</span>
+<span class="material-symbols-outlined text-primary text-[20px] mt-0.5 shrink-0" style="font-variation-settings: 'FILL' 1;">speed</span>
 <div>
 <span class="font-label-md text-label-md text-primary block">Điều Phối 24h - 48h Cấp Tốc</span>
 <span class="font-body-sm text-body-sm text-on-surface-variant">Áp dụng cho toàn bộ đại lý cấp 1 và chuỗi F&amp;B tại Đông Nam Bộ &amp; Tây Nam Bộ.</span>
 </div>
 </div>
 <div class="flex items-start gap-space-sm p-space-sm bg-surface rounded">
-<span class="material-symbols-outlined text-primary text-[20px] mt-0.5" style="font-variation-settings: 'FILL' 1;">policy</span>
+<span class="material-symbols-outlined text-primary text-[20px] mt-0.5 shrink-0" style="font-variation-settings: 'FILL' 1;">policy</span>
 <div>
 <span class="font-label-md text-label-md text-primary block">Bảo Hộ Địa Bàn Độc Quyền</span>
 <span class="font-body-sm text-body-sm text-on-surface-variant">Kiểm soát chống lấn vùng, ổn định giá sỉ niêm yết theo hợp đồng pháp lý.</span>
@@ -66,7 +66,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 </div>
 </div>
 <!-- Legal Footnote Anchor -->
-<div class="relative z-10 pt-space-md bg-surface-container-high/60 p-space-md rounded">
+<div class="relative z-10 p-space-md bg-surface-container-high/60 rounded">
 <div class="font-label-sm text-label-sm text-on-surface font-semibold mb-space-xs uppercase">CÔNG TY TNHH BIA LONG THÀNH</div>
 <p class="font-body-sm text-body-sm text-on-surface-variant mb-space-xs">
           Mã số thuế: <strong class="text-primary font-semibold">3603823707</strong> • Cấp bởi Sở Kế hoạch và Đầu tư Tỉnh Đồng Nai.
@@ -77,36 +77,36 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 </div>
 </div>
 <!-- Right Column: Dealer Portal Gateway & Dynamic States (7 Cols) -->
-<div class="lg:col-span-7 p-gutter lg:p-space-xl flex flex-col justify-between">
+<div class="col-span-1 lg:col-span-7 p-gutter-mobile md:p-space-xl flex flex-col justify-between">
 <!-- Top Action Switcher: Normal Login or View Simulated States -->
 <div>
-<div class="flex items-center justify-between pb-space-md mb-space-lg">
-<div>
-<span class="font-label-sm text-label-sm text-secondary uppercase font-semibold">CỔNG BẢO MẬT SSL 256-BIT</span>
-<h1 class="font-headline-lg text-headline-lg text-primary font-bold">Xác Thực Đại Lý</h1>
+<div class="flex flex-wrap items-start justify-between gap-space-sm pb-space-md mb-space-lg border-b border-outline-variant/30">
+<div class="min-w-0">
+<span class="font-label-sm text-label-sm text-secondary uppercase font-semibold tracking-widest block mb-1">Cổng bảo mật SSL 256-bit</span>
+<h1 class="font-headline-md text-headline-md lg:text-headline-lg lg:leading-[1.15] text-primary font-bold">Xác Thực Đại Lý</h1>
 </div>
-<div class="inline-flex items-center gap-1.5 px-space-sm py-1 bg-primary-fixed/30 text-primary rounded text-label-sm font-label-sm">
+<div class="inline-flex items-center gap-1.5 px-space-sm py-1 bg-primary-fixed/30 text-primary rounded text-label-sm font-label-sm whitespace-nowrap shrink-0">
 <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
             Máy chủ trực tuyến
           </div>
 </div>
-<!-- Tab / Switcher for Interactive Demonstration of Portal Flows -->
-<div class="flex flex-wrap gap-space-xs mb-space-lg p-1 bg-surface-container rounded">
-<button class="tab-btn px-space-md py-1.5 font-label-md text-label-md rounded bg-surface-container-lowest text-primary font-semibold transition-all border border-outline-variant/40" id="tab-login" onclick="switchState('login')">
+<!-- Tab / Switcher for Interactive Demonstration of Portal Flows (scrollable on mobile) -->
+<div class="tabs-scroll flex gap-1 overflow-x-auto mb-space-lg p-1 bg-surface-container rounded" role="tablist">
+<button class="tab-btn shrink-0 whitespace-nowrap px-space-md py-2 font-label-md text-label-md rounded bg-surface-container-lowest text-primary font-semibold transition-all border border-outline-variant/40" id="tab-login" onclick="switchState('login')">
             Cửa Sổ Đăng Nhập
           </button>
-<button class="tab-btn px-space-md py-1.5 font-label-md text-label-md rounded text-on-surface-variant hover:text-primary transition-all" id="tab-pending" onclick="switchState('pending')">
+<button class="tab-btn shrink-0 whitespace-nowrap px-space-md py-2 font-label-md text-label-md rounded text-on-surface-variant hover:text-primary transition-all" id="tab-pending" onclick="switchState('pending')">
             Chờ Thẩm Định (Pending)
           </button>
-<button class="tab-btn px-space-md py-1.5 font-label-md text-label-md rounded text-on-surface-variant hover:text-primary transition-all" id="tab-required" onclick="switchState('required')">
+<button class="tab-btn shrink-0 whitespace-nowrap px-space-md py-2 font-label-md text-label-md rounded text-on-surface-variant hover:text-primary transition-all" id="tab-required" onclick="switchState('required')">
             Bổ Sung Hồ Sơ
           </button>
-<button class="tab-btn px-space-md py-1.5 font-label-md text-label-md rounded text-on-surface-variant hover:text-primary transition-all" id="tab-suspended" onclick="switchState('suspended')">
+<button class="tab-btn shrink-0 whitespace-nowrap px-space-md py-2 font-label-md text-label-md rounded text-on-surface-variant hover:text-primary transition-all" id="tab-suspended" onclick="switchState('suspended')">
             Tạm Đình Chỉ
           </button>
 </div>
 <!-- PANEL 1: Standard Dealer Login Form -->
-<div class="state-panel flex flex-col space-y-space-md" id="panel-login">
+<div class="state-panel flex flex-col" id="panel-login">
 <form class="space-y-space-md" onsubmit="event.preventDefault(); window.location.href = '/dai-ly';">
 <!-- Dealer Identifier -->
 <div>
@@ -114,8 +114,8 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
                 Mã Số Thuế / Tên Đăng Nhập / Email Đại Lý <span class="text-error">*</span>
 </label>
 <div class="relative">
-<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[18px]">badge</span>
-<input class="w-full h-10 pl-10 pr-space-md bg-surface-container-lowest font-body-md text-body-md text-on-surface rounded focus:outline-none focus:ring-1 focus:ring-primary border border-outline-variant/40" id="dealer-id" name="dealer-id" placeholder="Ví dụ: 3603823707 hoặc daily@longthanhbeer.com" type="text" value="3603823707"/>
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[20px] pointer-events-none">badge</span>
+<input class="w-full h-11 lg:h-10 pl-10 pr-space-md bg-surface-container-lowest font-body-md text-body-md text-on-surface rounded focus:outline-none focus:ring-1 focus:ring-primary border border-outline-variant/40" id="dealer-id" name="dealer-id" placeholder="Vd: 3603823707 hoặc daily@longthanhbeer.com" type="text" value="3603823707" autocomplete="username" inputmode="text" autocapitalize="none"/>
 </div>
 </div>
 <!-- Password -->
@@ -124,52 +124,52 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 <label class="block font-label-md text-label-md text-on-surface font-semibold" for="dealer-pwd">
                   Mật Khẩu Phân Phối <span class="text-error">*</span>
 </label>
-<a class="font-label-sm text-label-sm text-secondary hover:underline font-medium" href="#reset-pass">Quên mật khẩu?</a>
+<a class="font-label-sm text-label-sm text-secondary hover:underline font-medium py-1" href="#reset-pass">Quên mật khẩu?</a>
 </div>
 <div class="relative">
-<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[18px]">lock</span>
-<input class="w-full h-10 pl-10 pr-10 bg-surface-container-lowest font-body-md text-body-md text-on-surface rounded focus:outline-none focus:ring-1 focus:ring-primary border border-outline-variant/40" id="dealer-pwd" name="dealer-pwd" type="password" value="EnterprisePass2025"/>
-<button class="absolute right-3 top-1/2 -translate-y-1/2 text-outline hover:text-on-surface" onclick="togglePasswordVisibility()" type="button">
-<span class="material-symbols-outlined text-[18px]" id="eye-icon">visibility</span>
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[20px] pointer-events-none">lock</span>
+<input class="w-full h-11 lg:h-10 pl-10 pr-11 bg-surface-container-lowest font-body-md text-body-md text-on-surface rounded focus:outline-none focus:ring-1 focus:ring-primary border border-outline-variant/40" id="dealer-pwd" name="dealer-pwd" type="password" value="EnterprisePass2025" autocomplete="current-password"/>
+<button class="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 flex items-center justify-center text-outline hover:text-on-surface" onclick="togglePasswordVisibility()" type="button" aria-label="Hiện hoặc ẩn mật khẩu">
+<span class="material-symbols-outlined text-[20px]" id="eye-icon">visibility</span>
 </button>
 </div>
 </div>
 <!-- Remember Account / Session -->
-<div class="flex items-center justify-between pt-space-xs">
-<label class="flex items-center gap-space-xs cursor-pointer">
-<input checked="" class="w-4 h-4 rounded text-primary focus:ring-primary" type="checkbox"/>
+<div class="flex flex-wrap items-center justify-between gap-x-space-md gap-y-1 pt-space-xs">
+<label class="flex items-center gap-space-xs cursor-pointer min-h-[36px]">
+<input checked="" class="w-4.5 h-4.5 rounded text-primary focus:ring-primary accent-primary" type="checkbox"/>
 <span class="font-body-sm text-body-sm text-on-surface-variant">Lưu phiên giao dịch trên máy trạm này</span>
 </label>
-<span class="font-label-sm text-label-sm text-outline flex items-center gap-1">
+<span class="font-label-sm text-label-sm text-outline flex items-center gap-1 whitespace-nowrap">
 <span class="material-symbols-outlined text-[14px]">shield</span> Bảo vệ IP
               </span>
 </div>
 <!-- Submit Button (Amber Accent as per B2B Spec) -->
-<button class="w-full h-11 bg-secondary text-on-secondary hover:bg-secondary-container hover:text-on-secondary-container transition-colors rounded font-label-lg text-label-lg font-bold flex items-center justify-center gap-space-xs border border-outline-variant/40" type="submit">
+<button class="w-full h-12 lg:h-11 bg-secondary text-on-secondary hover:bg-secondary-container hover:text-on-secondary-container active:bg-secondary-container transition-colors rounded font-label-lg text-label-lg font-bold flex items-center justify-center gap-space-xs" type="submit">
 <span class="material-symbols-outlined text-[20px]">login</span>
 <span>ĐĂNG NHẬP CỔNG ĐẠI LÝ</span>
 </button>
 </form>
 <!-- Register Link -->
-<div class="p-space-md bg-surface-container-low rounded flex items-center justify-between mt-space-md">
-<div>
+<div class="p-space-md bg-surface-container-low rounded flex flex-col gap-space-sm sm:flex-row sm:items-center sm:justify-between mt-space-md">
+<div class="min-w-0">
 <span class="font-label-md text-label-md text-on-surface font-semibold block">Chưa kích hoạt đại lý phân phối?</span>
 <span class="font-body-sm text-body-sm text-on-surface-variant">Nộp hồ sơ pháp nhân để nhận chiết khấu định mức bậc thang.</span>
 </div>
-<a class="px-space-md py-2 bg-primary text-on-primary hover:bg-primary-container font-label-sm text-label-sm rounded uppercase tracking-wider font-semibold shrink-0" href="/doi-tac-phan-phoi">
+<a class="w-full sm:w-auto text-center px-space-md py-2.5 sm:py-2 bg-primary text-on-primary hover:bg-primary-container font-label-sm text-label-sm rounded uppercase tracking-wider font-semibold shrink-0" href="/doi-tac-phan-phoi">
               Mở Tài Khoản
             </a>
 </div>
 </div>
 <!-- PANEL 2: Feedback State - Pending Review -->
-<div class="state-panel hidden flex flex-col space-y-space-md" id="panel-pending">
-<div class="p-space-lg bg-surface-container rounded border border-outline-variant/40">
-<div class="flex items-start gap-space-md">
+<div class="state-panel hidden flex-col" id="panel-pending">
+<div class="p-space-md lg:p-space-lg bg-surface-container rounded border border-outline-variant/40">
+<div class="flex flex-col sm:flex-row sm:items-start gap-space-md">
 <div class="w-12 h-12 bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center rounded shrink-0">
 <span class="material-symbols-outlined text-[28px]" style="font-variation-settings: 'FILL' 1;">pending_actions</span>
 </div>
-<div class="flex flex-col">
-<div class="flex items-center gap-space-xs mb-space-xs">
+<div class="flex flex-col min-w-0">
+<div class="flex flex-wrap items-center gap-x-space-xs gap-y-1 mb-space-xs">
 <span class="px-2 py-0.5 bg-secondary-container/40 text-on-secondary-container font-label-sm text-label-sm rounded uppercase font-bold">Mã hồ sơ: #DKDL-8842</span>
 <span class="font-label-sm text-label-sm text-outline">Gửi lúc: 09:30 - Hôm nay</span>
 </div>
@@ -177,7 +177,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 <p class="font-body-md text-body-md text-on-surface-variant mb-space-md leading-relaxed">
                   Yêu cầu mở tài khoản đại lý của quý khách đang được <strong>Phòng Kinh doanh LTB</strong> thẩm định giấy phép kinh doanh. Chúng tôi sẽ thông báo kết quả qua email và điện thoại trong <strong>24 giờ làm việc</strong>.
                 </p>
-<div class="grid grid-cols-2 gap-space-sm p-space-sm bg-surface-container-lowest rounded mb-space-md">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm p-space-sm bg-surface-container-lowest rounded mb-space-md">
 <div>
 <span class="font-label-sm text-label-sm text-outline block">Đơn vị thẩm định:</span>
 <span class="font-body-sm text-body-sm text-on-surface font-medium">Khối Thương Mại B2B - Bia Long Thành</span>
@@ -187,11 +187,11 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 <span class="font-body-sm text-body-sm text-primary font-bold">Trước 17:00 Ngày làm việc</span>
 </div>
 </div>
-<div class="flex items-center gap-space-sm">
-<button class="px-space-md py-2 bg-primary text-on-primary font-label-sm text-label-sm rounded uppercase font-semibold" onclick="switchState('login')" type="button">
+<div class="flex flex-wrap items-center gap-space-sm">
+<button class="px-space-md py-2.5 sm:py-2 bg-primary text-on-primary font-label-sm text-label-sm rounded uppercase font-semibold" onclick="switchState('login')" type="button">
                     Quay Lại Đăng Nhập
                   </button>
-<a class="px-space-md py-2 bg-surface-container-high text-primary font-label-sm text-label-sm rounded font-medium flex items-center gap-1" href="tel:0899447181">
+<a class="px-space-md py-2.5 sm:py-2 bg-surface-container-high text-primary font-label-sm text-label-sm rounded font-medium flex items-center gap-1" href="tel:0899447181">
 <span class="material-symbols-outlined text-[16px]">call</span> Tra cứu tiến độ
                   </a>
 </div>
@@ -200,14 +200,14 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 </div>
 </div>
 <!-- PANEL 3: Feedback State - Information Required -->
-<div class="state-panel hidden flex flex-col space-y-space-md" id="panel-required">
-<div class="p-space-lg bg-surface-container-high rounded border border-outline-variant/40">
-<div class="flex items-start gap-space-md">
+<div class="state-panel hidden flex-col" id="panel-required">
+<div class="p-space-md lg:p-space-lg bg-surface-container-high rounded border border-outline-variant/40">
+<div class="flex flex-col sm:flex-row sm:items-start gap-space-md">
 <div class="w-12 h-12 bg-secondary text-on-secondary flex items-center justify-center rounded shrink-0">
 <span class="material-symbols-outlined text-[28px]">upload_file</span>
 </div>
-<div class="flex flex-col w-full">
-<div class="flex items-center gap-space-xs mb-space-xs">
+<div class="flex flex-col w-full min-w-0">
+<div class="flex flex-wrap items-center gap-x-space-xs gap-y-1 mb-space-xs">
 <span class="px-2 py-0.5 bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm rounded uppercase font-bold">Yêu Cầu Hoàn Thiện</span>
 </div>
 <h3 class="font-headline-sm text-headline-sm text-primary mb-space-xs">Yêu Cầu Bổ Sung Thông Tin Pháp Lý</h3>
@@ -220,11 +220,11 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 <span class="font-label-md text-label-md text-primary font-semibold">Tải lên Giấy phép Phân phối đồ uống có cồn (PDF, JPG, PNG)</span>
 <span class="font-body-sm text-body-sm text-outline mt-0.5">Dung lượng tối đa 15MB • Kèm chữ ký giám đốc hoặc bản sao công chứng</span>
 </div>
-<div class="flex items-center gap-space-sm">
-<button class="px-space-md py-2 bg-secondary text-on-secondary font-label-sm text-label-sm rounded uppercase font-bold flex items-center gap-1" type="button">
+<div class="flex flex-wrap items-center gap-space-sm">
+<button class="px-space-md py-2.5 sm:py-2 bg-secondary text-on-secondary font-label-sm text-label-sm rounded uppercase font-bold flex items-center gap-1" type="button">
 <span class="material-symbols-outlined text-[16px]">send</span> Nộp Văn Bản Bổ Sung
                   </button>
-<button class="px-space-md py-2 bg-surface text-on-surface font-label-sm text-label-sm rounded font-medium" onclick="switchState('login')" type="button">
+<button class="px-space-md py-2.5 sm:py-2 bg-surface text-on-surface font-label-sm text-label-sm rounded font-medium" onclick="switchState('login')" type="button">
                     Để Sau
                   </button>
 </div>
@@ -233,38 +233,38 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 </div>
 </div>
 <!-- PANEL 4: Feedback State - Suspended -->
-<div class="state-panel hidden flex flex-col space-y-space-md" id="panel-suspended">
-<div class="p-space-lg bg-error-container/40 rounded border border-outline-variant/40">
-<div class="flex items-start gap-space-md">
+<div class="state-panel hidden flex-col" id="panel-suspended">
+<div class="p-space-md lg:p-space-lg bg-error-container/40 rounded border border-outline-variant/40">
+<div class="flex flex-col sm:flex-row sm:items-start gap-space-md">
 <div class="w-12 h-12 bg-error text-on-error flex items-center justify-center rounded shrink-0">
 <span class="material-symbols-outlined text-[28px]" style="font-variation-settings: 'FILL' 1;">gavel</span>
 </div>
-<div class="flex flex-col">
-<div class="flex items-center gap-space-xs mb-space-xs">
+<div class="flex flex-col min-w-0">
+<div class="flex flex-wrap items-center gap-x-space-xs gap-y-1 mb-space-xs">
 <span class="px-2 py-0.5 bg-error text-on-error font-label-sm text-label-sm rounded uppercase font-bold">Mã Khóa: #LOCK-DIST-09</span>
 </div>
 <h3 class="font-headline-sm text-headline-sm text-error font-bold mb-space-xs">Tài Khoản Tạm Đình Chỉ (Suspended)</h3>
 <p class="font-body-md text-body-md text-on-error-container mb-space-md leading-relaxed">
                   Tài khoản bị tạm khóa do phát hiện dấu hiệu vi phạm chính sách địa bàn bán buôn được quy định tại Khoản 4 Điều 7 Hợp đồng phân phối hoặc phát sinh công nợ quá hạn đối soát. Vui lòng liên hệ trực tiếp Bộ phận Pháp chế &amp; Kiểm soát Kênh B2B.
                 </p>
-<div class="p-space-sm bg-surface-container-lowest rounded flex items-center justify-between mb-space-md">
+<div class="p-space-sm bg-surface-container-lowest rounded flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm mb-space-md">
 <div class="flex items-center gap-space-sm">
-<span class="material-symbols-outlined text-secondary text-[22px]">support_agent</span>
+<span class="material-symbols-outlined text-secondary text-[22px] shrink-0">support_agent</span>
 <div>
 <span class="font-label-sm text-label-sm text-outline block">Hotline Điều Hành Kênh Phân Phối B2B:</span>
 <a class="font-headline-sm text-headline-sm text-primary font-bold" href="tel:0899447181">0899 447 181</a>
 </div>
 </div>
-<a class="px-space-md py-2 bg-secondary text-on-secondary font-label-sm text-label-sm rounded uppercase font-semibold" href="tel:0899447181">
+<a class="w-full sm:w-auto text-center px-space-md py-2.5 sm:py-2 bg-secondary text-on-secondary font-label-sm text-label-sm rounded uppercase font-semibold" href="tel:0899447181">
                     Gọi Ngay
                   </a>
 </div>
-<div class="flex items-center gap-space-sm">
-<a class="font-label-sm text-label-sm text-primary font-semibold hover:underline flex items-center gap-1" href="mailto:phapche@longthanhbeer.com">
+<div class="flex flex-wrap items-center gap-x-space-sm gap-y-2">
+<a class="font-label-sm text-label-sm text-primary font-semibold hover:underline flex items-center gap-1 py-1" href="mailto:phapche@longthanhbeer.com">
 <span class="material-symbols-outlined text-[16px]">mail</span> Gửi văn bản giải trình trực tuyến
                   </a>
-<span class="text-outline">•</span>
-<button class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary" onclick="switchState('login')" type="button">
+<span class="hidden sm:inline text-outline">•</span>
+<button class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary py-1" onclick="switchState('login')" type="button">
                     Đăng nhập tài khoản khác
                   </button>
 </div>
@@ -284,6 +284,10 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 </div>
 </div>
 </main>
+<style is:inline>
+  .tabs-scroll { scrollbar-width: none; -ms-overflow-style: none; }
+  .tabs-scroll::-webkit-scrollbar { display: none; }
+</style>
 <script is:inline>
   function switchState(stateName) {
     // Hide all panels
@@ -293,7 +297,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     // Reset tab button styles
     const tabButtons = document.querySelectorAll('.tab-btn');
     tabButtons.forEach(btn => {
-      btn.classList.remove('bg-surface-container-lowest', 'text-primary', 'shadow-sm', 'font-semibold');
+      btn.classList.remove('bg-surface-container-lowest', 'text-primary', 'shadow-sm', 'font-semibold', 'border', 'border-outline-variant/40');
       btn.classList.add('text-on-surface-variant');
     });
 
@@ -307,7 +311,8 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     const targetTab = document.getElementById('tab-' + stateName);
     if (targetTab) {
       targetTab.classList.remove('text-on-surface-variant');
-      targetTab.classList.add('bg-surface-container-lowest', 'text-primary', 'shadow-sm', 'font-semibold');
+      targetTab.classList.add('bg-surface-container-lowest', 'text-primary', 'shadow-sm', 'font-semibold', 'border', 'border-outline-variant/40');
+      targetTab.scrollIntoView({ block: 'nearest', inline: 'nearest' });
     }
   }
 
