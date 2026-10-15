@@ -3,11 +3,17 @@ export const SITE = {
   name: 'Long Thanh Beer Company Limited',
   legalName: 'CÔNG TY TNHH BIA LONG THÀNH',
   taxCode: '3603823707',
-  hotline: '0899 447 181',
-  hotlineTel: '0899447181',
+  representative: 'HOÀNG XUÂN DŨNG',
+  foundingDate: '19/08/2021',
+  hotline: '0988.087.806',
+  hotlineTel: '0988087806',
+  hotlineAlt: '0899 447 181',
+  hotlineAltTel: '0899447181',
+  zaloUrl: 'https://zalo.me/0988087806',
+  openingHours: '7:00 - 19:00 (T2 - CN)',
   /** Một hộp thư chung duy nhất (business rule). TODO: xác nhận địa chỉ chính thức với LTB. */
   sharedEmail: 'sales@bialongthanh.vn',
-  address: '1401/2, Tổ 17, Ấp Phước Hòa, Xã Long Phước, Huyện Long Thành, Tỉnh Đồng Nai, Việt Nam',
+  address: '1401/2, tổ 17, ấp Phước Hòa, Xã Long Phước, Tỉnh Đồng Nai, Việt Nam',
 };
 
 /** State machine yêu cầu đặt hàng (đã chốt). */
