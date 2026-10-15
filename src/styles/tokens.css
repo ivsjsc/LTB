@@ -1,0 +1,63 @@
+/* LTB Design Tokens — nguồn: stitch/long_thanh_beer_enterprise_design_system/DESIGN.md
+   KHÓA: không thêm gradient, glassmorphism, đổ bóng khuếch tán. */
+:root {
+  /* Màu thương hiệu đã khóa */
+  --ltb-charcoal: #171916;
+  --ltb-forest: #183B2B;
+  --ltb-amber: #D99A35; /* chỉ làm accent */
+  --ltb-cream: #F6F2E9;
+  --ltb-white: #FFFFFF;
+  --ltb-stone: #8C9288;
+  --ltb-stone-text: #6B7280;
+
+  /* Surface / text (Stitch) */
+  --surface: #fdf9f0;
+  --surface-container-low: #f7f3ea;
+  --surface-container: #f1eee5;
+  --surface-container-high: #ece8df;
+  --on-surface: #1c1c16;
+  --on-surface-variant: #414844;
+  --outline: #727973;
+  --outline-variant: #c1c8c2;
+  --primary: #002517;
+  --primary-container: #183b2b;
+  --secondary: #825500;
+  --error: #ba1a1a;
+
+  /* Badge (design system §5) */
+  --badge-ok-bg: #EAF2ED;
+  --badge-ok-fg: #183B2B;
+  --badge-ok-border: rgba(24, 59, 43, 0.2);
+  --badge-warn-bg: #FDF5E8;
+  --badge-warn-fg: #9A6818;
+  --badge-warn-border: rgba(217, 154, 53, 0.3);
+
+  /* Button hover (design system §1) */
+  --btn-primary-hover: #122C20;
+  --btn-ghost-hover: rgba(24, 59, 43, 0.06);
+
+  /* Typography */
+  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+
+  /* Radius (Soft Sharp) */
+  --radius-sm: 0.125rem;
+  --radius: 0.25rem;
+  --radius-md: 0.375rem;
+  --radius-lg: 0.5rem;
+
+  /* Spacing */
+  --gutter: 1.5rem;
+  --gutter-mobile: 1rem;
+  --margin: 3rem;
+  --margin-tablet: 2rem;
+  --margin-mobile: 1.25rem;
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2.5rem;
+
+  /* Elevation: chỉ viền mảnh, không blur */
+  --border-hairline: 1px solid rgba(24, 59, 43, 0.12);
+  --border-layer2: 1px solid #183B2B;
+}

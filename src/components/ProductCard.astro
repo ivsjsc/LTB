@@ -1,0 +1,61 @@
+---
+export interface ProductSpec { label: string; value: string }
+export interface Props {
+  sku: string;
+  name: string;
+  desc: string;
+  category: 'keg' | 'pack' | 'non-alc' | 'tobacco';
+  pack: 'keg20' | 'can24' | 'bottle24';
+  image: string;
+  imageAlt: string;
+  badge: string;
+  badgeTone?: 'primary' | 'neutral' | 'tint';
+  packLabel: string;
+  meta: string;
+  metaTone?: 'secondary' | 'tint';
+  specs: ProductSpec[];
+  moq: string;
+}
+const p = Astro.props;
+const tone = { primary: 'bg-primary text-on-primary', neutral: 'bg-surface-container-high text-on-surface', tint: 'bg-surface-tint text-on-primary' }[p.badgeTone ?? 'primary'];
+const metaCls = p.metaTone === 'tint' ? 'text-surface-tint' : 'text-secondary';
+---
+<article class="product-item flex flex-col bg-surface-container-lowest rounded border border-outline-variant/40 hover:border-primary-container transition-colors" data-category={p.category} data-pack={p.pack}>
+  <div class="relative w-full h-64 bg-surface-container overflow-hidden rounded-t">
+    <img class="w-full h-full object-cover" src={p.image} alt={p.imageAlt} loading="lazy" />
+    <span class={`absolute top-3 left-3 px-2 py-1 ${tone} font-label-sm tracking-wider uppercase rounded border border-outline-variant/40`}>{p.badge}</span>
+    <span class="absolute top-3 right-3 px-2 py-1 bg-surface-container-lowest/90 text-secondary font-label-sm font-bold uppercase rounded border border-outline-variant/40">{p.packLabel}</span>
+  </div>
+  <div class="p-space-md flex flex-col flex-1 justify-between gap-space-md">
+    <div>
+      <div class="flex items-center justify-between gap-space-sm text-on-surface-variant font-label-sm mb-1">
+        <span>SKU: {p.sku}</span>
+        <span class={`${metaCls} font-semibold`}>{p.meta}</span>
+      </div>
+      <h2 class="font-headline-sm text-primary tracking-tight font-bold">{p.name}</h2>
+      <p class="font-body-md text-on-surface-variant mt-2 line-clamp-2">{p.desc}</p>
+      <div class="mt-space-md p-space-sm bg-surface-container-low rounded flex flex-col gap-1.5 font-body-sm text-on-surface-variant">
+        {p.specs.map((s) => (
+          <div class="flex justify-between items-center gap-space-sm">
+            <span>{s.label}</span>
+            <span class="font-semibold text-on-surface text-right">{s.value}</span>
+          </div>
+        ))}
+        <div class="flex justify-between items-center gap-space-sm">
+          <span>MOQ phân phối:</span>
+          <span class="font-semibold text-primary font-label-sm text-right">{p.moq}</span>
+        </div>
+      </div>
+    </div>
+    <div class="pt-space-xs flex items-center gap-space-xs">
+      <button type="button" class="flex-1 py-2.5 px-3 rounded bg-surface-container hover:bg-surface-container-high text-primary font-label-lg transition-colors flex items-center justify-center gap-1 border border-outline-variant/40" data-spec-sku={p.sku}>
+        <span class="material-symbols-outlined text-[18px]">visibility</span>
+        <span>Hồ sơ kỹ thuật</span>
+      </button>
+      <a class="flex-1 py-2.5 px-3 rounded bg-secondary hover:bg-on-secondary-container text-on-secondary font-label-lg transition-colors flex items-center justify-center gap-1 border border-outline-variant/40" href={`/lien-he?sku=${p.sku}#yeu-cau-bao-gia`}>
+        <span class="material-symbols-outlined text-[18px]">request_quote</span>
+        <span>Yêu cầu báo giá</span>
+      </a>
+    </div>
+  </div>
+</article>

@@ -1,0 +1,97 @@
+---
+/**
+ * LeadForm — biểu mẫu liên hệ / yêu cầu báo giá (khách chưa có tài khoản).
+ * Đủ state: idle, validation, submitting (disabled), success, error.
+ * CHƯA có API: submit được mô phỏng ở client. Khi có API, chỉ cần set `endpoint`.
+ */
+import { SITE } from '../lib/site';
+import FormStatus from './FormStatus.astro';
+interface Topic { value: string; label: string }
+interface Props {
+  id?: string;
+  topics?: Topic[];
+  submitLabel?: string;
+  endpoint?: string;
+  compact?: boolean;
+}
+const {
+  id = 'lead-form',
+  topics = [
+    { value: 'dai-ly-si', label: 'Đăng ký làm Đại lý phân phối / Nhà bán buôn cấp 1' },
+    { value: 'bao-gia', label: 'Yêu cầu báo giá sản phẩm' },
+    { value: 'gia-cong-oem', label: 'Gia công bia nhãn riêng (OEM / Contract Brewing)' },
+    { value: 'hoa-don-vat', label: 'Đối soát công nợ & hóa đơn VAT điện tử' },
+    { value: 'khac', label: 'Nội dung hợp tác khác' },
+  ],
+  submitLabel = 'Gửi yêu cầu cho Phòng Kinh Doanh',
+  endpoint = '',
+  compact = false,
+} = Astro.props;
+const input = 'h-10 px-3 rounded bg-surface-container-lowest text-on-surface font-body-md border border-[#8C9288] transition-colors w-full min-w-0';
+const label = 'font-label-md text-on-surface';
+---
+<form id={id} data-lead-form data-endpoint={endpoint} novalidate class="flex flex-col gap-space-md" aria-live="polite">
+  <div class={`grid grid-cols-1 ${compact ? '' : 'md:grid-cols-2'} gap-space-md`}>
+    <div class="flex flex-col gap-1.5">
+      <label class={label} for={`${id}-name`}>Họ tên người liên hệ <span class="text-error">*</span></label>
+      <input class={input} id={`${id}-name`} name="name" type="text" autocomplete="name" placeholder="Nguyễn Văn A" required />
+      <p class="field-error hidden font-label-sm text-error" data-error-for="name"></p>
+    </div>
+    <div class="flex flex-col gap-1.5">
+      <label class={label} for={`${id}-phone`}>Số điện thoại <span class="text-error">*</span></label>
+      <input class={input} id={`${id}-phone`} name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="09xx xxx xxx" required />
+      <p class="field-error hidden font-label-sm text-error" data-error-for="phone"></p>
+    </div>
+  </div>
+  <div class={`grid grid-cols-1 ${compact ? '' : 'md:grid-cols-2'} gap-space-md`}>
+    <div class="flex flex-col gap-1.5">
+      <label class={label} for={`${id}-email`}>Email công việc <span class="text-error">*</span></label>
+      <input class={input} id={`${id}-email`} name="email" type="email" autocomplete="email" placeholder="name@business.com" required />
+      <p class="field-error hidden font-label-sm text-error" data-error-for="email"></p>
+    </div>
+    <div class="flex flex-col gap-1.5">
+      <label class={label} for={`${id}-company`}>Đơn vị / Nhà hàng / Đại lý <span class="text-error">*</span></label>
+      <input class={input} id={`${id}-company`} name="company" type="text" autocomplete="organization" placeholder="Tên đơn vị kinh doanh" required />
+      <p class="field-error hidden font-label-sm text-error" data-error-for="company"></p>
+    </div>
+  </div>
+  <div class="flex flex-col gap-1.5">
+    <label class={label} for={`${id}-topic`}>Nội dung cần làm việc <span class="text-error">*</span></label>
+    <select class={input} id={`${id}-topic`} name="topic" required>
+      <option value="" disabled selected>Chọn nội dung phù hợp</option>
+      {topics.map((t) => <option value={t.value}>{t.label}</option>)}
+    </select>
+    <p class="field-error hidden font-label-sm text-error" data-error-for="topic"></p>
+  </div>
+  <div class="flex flex-col gap-1.5">
+    <label class={label} for={`${id}-message`}>Nội dung chi tiết <span class="text-error">*</span></label>
+    <textarea class="p-3 rounded bg-surface-container-lowest text-on-surface font-body-md border border-[#8C9288] w-full" id={`${id}-message`} name="message" rows="4" placeholder="Địa điểm kinh doanh, nhu cầu dự kiến hoặc câu hỏi cụ thể..." required></textarea>
+    <p class="field-error hidden font-label-sm text-error" data-error-for="message"></p>
+  </div>
+  <div class="flex flex-col gap-1">
+    <div class="flex items-start gap-2.5 pt-1">
+      <input class="mt-1 rounded accent-primary-container cursor-pointer" id={`${id}-legal`} name="legal" type="checkbox" required />
+      <label class="font-body-sm text-on-surface-variant cursor-pointer" for={`${id}-legal`}>
+        Tôi là người đại diện hợp pháp từ 18 tuổi trở lên của đơn vị kinh doanh và đồng ý để Phòng Kinh Doanh LTB liên hệ qua hộp thư chung {SITE.sharedEmail} hoặc điện thoại.
+      </label>
+    </div>
+    <p class="field-error hidden font-label-sm text-error" data-error-for="legal"></p>
+  </div>
+
+  <div class="pt-space-sm flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-space-md">
+    <button type="submit" data-submit class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-space-xl py-3 rounded bg-primary-container hover:bg-[#122C20] text-on-primary font-label-lg transition-colors font-bold">
+      <span class="material-symbols-outlined text-[20px]" data-submit-icon>send</span>
+      <span data-submit-label>{submitLabel}</span>
+    </button>
+    <span class="font-label-sm text-on-surface-variant flex items-center gap-1">
+      <span class="material-symbols-outlined text-[16px] text-surface-tint">lock</span>
+      Thông tin chỉ dùng cho mục đích thương mại B2B
+    </span>
+  </div>
+
+  <FormStatus />
+</form>
+
+<script>
+  import '../scripts/lead-form';
+</script>

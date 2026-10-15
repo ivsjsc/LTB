@@ -1,0 +1,12 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import DealerHeader from '../components/DealerHeader.astro';
+import DealerFooter from '../components/DealerFooter.astro';
+interface Props { title: string; bodyClass?: string; active?: string; area?: 'dealer' | 'admin' }
+const props = Astro.props;
+---
+<BaseLayout title={props.title} bodyClass={props.bodyClass}>
+  <DealerHeader active={props.active} area={props.area ?? 'dealer'} />
+  <slot />
+  <DealerFooter />
+</BaseLayout>

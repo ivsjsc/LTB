@@ -1,0 +1,91 @@
+---
+import { SITE } from '../lib/site';
+interface Props { active?: string; area?: 'dealer' | 'admin' }
+const { active = '', area = 'dealer' } = Astro.props;
+const dealerNav = [
+  { key: 'dashboard', label: 'Tổng quan', href: '/dai-ly' },
+  { key: 'danh-muc-dat-hang', label: 'Tạo yêu cầu đặt hàng', href: '/dai-ly/tao-yeu-cau' },
+  { key: 'don-dat-hang-cua-toi', label: 'Yêu cầu đặt hàng của tôi', href: '/dai-ly' },
+  { key: 'ho-so-dai-ly', label: 'Hồ sơ đại lý', href: '/dai-ly' },
+];
+const adminNav = [
+  { key: 'dashboard', label: 'Tổng quan', href: '/admin' },
+  { key: 'dai-ly', label: 'Duyệt hồ sơ đại lý', href: '/admin#dealer-queue' },
+  { key: 'don-hang', label: 'Duyệt yêu cầu đặt hàng', href: '/admin#order-queue' },
+  { key: 'nhat-ky', label: 'Nhật ký trạng thái', href: '/admin#audit-log' },
+];
+const nav = area === 'admin' ? adminNav : dealerNav;
+const on = 'bg-primary-container text-on-primary-fixed rounded font-label-md text-label-md px-space-md py-space-sm';
+const off = 'font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface px-space-md py-space-sm rounded transition-colors';
+const idName = area === 'admin' ? 'Quản trị viên LTB' : 'Đại lý Cấp 1 Đông Nam Bộ';
+const idSub = area === 'admin' ? 'Khu vực CMS nội bộ' : 'MST: 3603847291';
+---
+<header class="fixed top-0 left-0 right-0 z-50 bg-surface border-b border-outline-variant/30">
+  <div class="w-full bg-surface-container-high px-gutter-mobile md:px-gutter py-space-xs">
+    <div class="w-full flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant">
+      <div class="flex items-center gap-space-sm min-w-0">
+        <span class="material-symbols-outlined text-secondary text-[16px] shrink-0">info</span>
+        <span class="truncate">Hệ thống tiếp nhận yêu cầu đặt hàng sỉ. Đây là yêu cầu, chưa phải đơn hàng đã xác nhận — LTB sẽ phản hồi chính thức.</span>
+      </div>
+      <div class="hidden md:flex items-center gap-space-md shrink-0">
+        <span class="flex items-center gap-space-xs text-on-surface">
+          <span class="material-symbols-outlined text-primary text-[14px]">call</span>Hotline B2B: <strong class="font-label-md text-label-md text-primary">{SITE.hotline}</strong>
+        </span>
+        <span class="text-outline-variant">|</span>
+        <span>Nhà máy: Huyện Long Thành, Đồng Nai</span>
+      </div>
+    </div>
+  </div>
+  <div class="h-20 w-full px-gutter-mobile md:px-gutter flex items-center justify-between gap-space-sm">
+    <div class="flex items-center gap-space-xl min-w-0">
+      <a href={area === 'admin' ? '/admin' : '/dai-ly'} class="flex items-center gap-space-md shrink-0">
+        <img src="/brand/ltb-monogram.svg" alt="Logo Long Thanh Beer (LTB)" width="40" height="40" class="w-10 h-10 object-contain" />
+        <div class="flex flex-col">
+          <span class="font-headline-sm text-headline-sm text-primary tracking-tight font-bold">BIA LONG THÀNH</span>
+          <span class="font-label-sm text-label-sm text-secondary tracking-widest uppercase">{area === 'admin' ? 'Quản trị CMS' : 'Cổng Đại Lý B2B'}</span>
+        </div>
+      </a>
+      <nav class="hidden lg:flex items-center gap-space-xs" aria-label="Điều hướng khu vực">
+        {nav.map((n) => (
+          <a href={n.href} aria-current={active === n.key ? 'page' : undefined} class={`transition-colors ${active === n.key ? on : off}`}>{n.label}</a>
+        ))}
+      </nav>
+    </div>
+    <div class="flex items-center gap-space-md shrink-0">
+      <div class="hidden sm:flex items-center gap-space-xs px-space-sm py-space-xs rounded bg-primary-fixed/40 text-on-primary-fixed-variant">
+        <span class="w-2 h-2 rounded-full bg-primary-container"></span>
+        <span class="font-label-sm text-label-sm font-semibold uppercase tracking-wider">Hoạt động</span>
+      </div>
+      <div class="flex items-center gap-space-sm pl-space-sm">
+        <div class="hidden md:flex flex-col text-right">
+          <span class="font-label-md text-label-md text-on-surface font-semibold">{idName}</span>
+          <span class="font-body-sm text-body-sm text-on-surface-variant">{idSub}</span>
+        </div>
+        <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center">
+          <span class="material-symbols-outlined text-on-primary text-[18px]">person</span>
+        </div>
+        <a class="p-space-xs rounded hover:bg-surface-container-high text-on-surface-variant hover:text-error transition-colors" href="/dai-ly/dang-nhap" title="Đăng xuất" aria-label="Đăng xuất">
+          <span class="material-symbols-outlined text-[20px]">logout</span>
+        </a>
+        <button type="button" id="ltb-dmenu-btn" class="lg:hidden w-10 h-10 rounded border border-outline-variant flex items-center justify-center text-primary" aria-expanded="false" aria-controls="ltb-dmobile-nav" aria-label="Mở menu">
+          <span class="material-symbols-outlined">menu</span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <nav id="ltb-dmobile-nav" class="hidden lg:hidden border-t border-outline-variant/30 bg-surface px-gutter-mobile md:px-gutter py-space-sm" aria-label="Điều hướng di động">
+    <ul class="flex flex-col">
+      {nav.map((n) => (
+        <li><a href={n.href} aria-current={active === n.key ? 'page' : undefined} class={`block px-space-md py-3 rounded font-label-md ${active === n.key ? on : 'text-on-surface-variant hover:bg-surface-container-high'}`}>{n.label}</a></li>
+      ))}
+    </ul>
+  </nav>
+</header>
+<script>
+  const b = document.getElementById('ltb-dmenu-btn');
+  const n = document.getElementById('ltb-dmobile-nav');
+  b?.addEventListener('click', () => {
+    const open = n?.classList.toggle('hidden') === false;
+    b.setAttribute('aria-expanded', String(open));
+  });
+</script>

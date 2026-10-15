@@ -1,0 +1,23 @@
+---
+import { ORDER_STATUS_LABEL, type OrderStatus } from '../lib/site';
+interface Props { status: OrderStatus; showCode?: boolean; class?: string }
+const { status, showCode = false, class: extra = '' } = Astro.props;
+// Badge theo design system: chữ nhật viền mảnh, bo 2px
+const tone: Record<OrderStatus, string> = {
+  draft: 'bg-surface-container text-on-surface-variant border-outline-variant',
+  submitted: 'bg-[#FDF5E8] text-[#9A6818] border-[rgba(217,154,53,0.3)]',
+  under_review: 'bg-[#FDF5E8] text-[#9A6818] border-[rgba(217,154,53,0.3)]',
+  revision_requested: 'bg-secondary-fixed text-on-secondary-fixed-variant border-[rgba(217,154,53,0.3)]',
+  confirmed: 'bg-[#EAF2ED] text-[#183B2B] border-[rgba(24,59,43,0.2)]',
+  rejected: 'bg-error-container text-on-error-container border-[rgba(186,26,26,0.25)]',
+  cancelled: 'bg-surface-container-high text-on-surface-variant border-outline-variant',
+};
+const icon: Record<OrderStatus, string> = {
+  draft: 'edit_note', submitted: 'send', under_review: 'pending', revision_requested: 'rate_review',
+  confirmed: 'check_circle', rejected: 'cancel', cancelled: 'block',
+};
+---
+<span class={`inline-flex items-center gap-1 px-2 py-0.5 rounded-sm border font-label-sm text-label-sm font-semibold whitespace-nowrap ${tone[status]} ${extra}`} data-status={status}>
+  <span class="material-symbols-outlined text-[14px]">{icon[status]}</span>
+  {ORDER_STATUS_LABEL[status]}{showCode && <span class="opacity-70 font-normal"> ({status})</span>}
+</span>

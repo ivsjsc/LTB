@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+
+<html lang="vi"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><title>LTB - Cổng Đại Lý B2B | Bia Long Thành</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      "colors": {
+        "on-secondary": "#ffffff",
+        "on-surface-variant": "#414844",
+        "on-primary": "#ffffff",
+        "surface-dim": "#dddad1",
+        "on-surface": "#1c1c16",
+        "surface-container-low": "#f7f3ea",
+        "primary-fixed": "#c4ecd4",
+        "on-tertiary-fixed-variant": "#464744",
+        "on-secondary-fixed": "#291800",
+        "surface-bright": "#fdf9f0",
+        "on-error-container": "#93000a",
+        "inverse-on-surface": "#f4f0e7",
+        "tertiary-fixed-dim": "#c6c7c2",
+        "tertiary": "#1e201d",
+        "on-primary-fixed-variant": "#2b4e3d",
+        "error": "#ba1a1a",
+        "on-primary-fixed": "#002113",
+        "tertiary-fixed": "#e3e3dd",
+        "outline-variant": "#c1c8c2",
+        "on-primary-container": "#80a690",
+        "on-tertiary-container": "#9c9d99",
+        "on-error": "#ffffff",
+        "on-tertiary": "#ffffff",
+        "surface": "#fdf9f0",
+        "background": "#fdf9f0",
+        "surface-tint": "#436653",
+        "secondary": "#825500",
+        "error-container": "#ffdad6",
+        "surface-container": "#f1eee5",
+        "on-background": "#1c1c16",
+        "surface-container-high": "#ece8df",
+        "on-secondary-fixed-variant": "#624000",
+        "secondary-fixed": "#ffddb2",
+        "outline": "#727973",
+        "secondary-container": "#feba52",
+        "tertiary-container": "#333532",
+        "primary-fixed-dim": "#a9cfb9",
+        "inverse-surface": "#31302b",
+        "on-secondary-container": "#724a00",
+        "surface-container-lowest": "#ffffff",
+        "secondary-fixed-dim": "#feba52",
+        "surface-variant": "#e6e2d9",
+        "surface-container-highest": "#e6e2d9",
+        "on-tertiary-fixed": "#1a1c19",
+        "primary-container": "#183b2b",
+        "inverse-primary": "#a9cfb9",
+        "primary": "#002517"
+      },
+      "borderRadius": {
+        "DEFAULT": "0.125rem",
+        "lg": "0.25rem",
+        "xl": "0.5rem",
+        "full": "0.75rem"
+      },
+      "spacing": {
+        "space-md": "1rem",
+        "gutter-mobile": "1rem",
+        "space-sm": "0.5rem",
+        "space-lg": "1.5rem",
+        "margin-mobile": "1.25rem",
+        "space-xs": "0.25rem",
+        "gutter": "1.5rem",
+        "margin-tablet": "2rem",
+        "margin": "3rem",
+        "space-xl": "2.5rem"
+      },
+      "fontFamily": {
+        "label-md": ["Inter"],
+        "headline-lg": ["Inter"],
+        "body-md": ["Inter"],
+        "headline-xl": ["Inter"],
+        "headline-sm": ["Inter"],
+        "body-sm": ["Inter"],
+        "headline-xl-mobile": ["Inter"],
+        "body-lg": ["Inter"],
+        "label-sm": ["Inter"],
+        "headline-md": ["Inter"],
+        "label-lg": ["Inter"],
+        "display-lg": ["Inter"]
+      },
+      "fontSize": {
+        "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600"}],
+        "headline-lg": ["28px", {"lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+        "body-md": ["14px", {"lineHeight": "22px", "fontWeight": "400"}],
+        "headline-xl": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.015em", "fontWeight": "700"}],
+        "headline-sm": ["18px", {"lineHeight": "26px", "fontWeight": "600"}],
+        "body-sm": ["12px", {"lineHeight": "18px", "fontWeight": "400"}],
+        "headline-xl-mobile": ["28px", {"lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+        "body-lg": ["16px", {"lineHeight": "26px", "fontWeight": "400"}],
+        "label-sm": ["11px", {"lineHeight": "14px", "letterSpacing": "0.03em", "fontWeight": "500"}],
+        "headline-md": ["22px", {"lineHeight": "30px", "letterSpacing": "-0.005em", "fontWeight": "600"}],
+        "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600"}],
+        "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+      }
+    }
+  }
+}</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 z-50 bg-surface/95 backdrop-blur-md shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="w-full bg-surface-container-high px-gutter py-space-xs"><div class="w-full flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-secondary text-[16px]">info</span><span>Hệ thống tiếp nhận yêu cầu đặt hàng sỉ. Giá và tồn kho sẽ được Nhân viên Kinh doanh LTB xác nhận chính thức trước khi xuất xưởng.</span></div><div class="hidden md:flex items-center gap-space-md"><span class="flex items-center gap-space-xs text-on-surface"><span class="material-symbols-outlined text-primary text-[14px]">call</span>Hotline B2B: <strong class="font-label-md text-label-md text-primary">0899 447 181</strong></span><span class="text-outline-variant">|</span><span>Nhà máy: Huyện Long Thành, Đồng Nai</span></div></div></div><div class="h-20 w-full px-gutter flex items-center justify-between"><div class="flex items-center gap-space-xl"><div class="flex items-center gap-space-md"><div class="w-10 h-10 rounded bg-primary-container flex items-center justify-center text-primary-fixed font-headline-md text-headline-md tracking-wider font-bold">LTB</div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary tracking-tight font-bold">BIA LONG THÀNH</span><span class="font-label-sm text-label-sm text-secondary tracking-widest uppercase">Cổng Đại Lý B2B</span></div></div><nav class="hidden lg:flex items-center gap-space-xs" data-active-classes="bg-primary-container text-on-primary-fixed rounded font-label-md text-label-md px-space-md py-space-sm"><a class="font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface px-space-md py-space-sm rounded transition-colors" data-path="dashboard" href="#">Tổng quan</a><a class="font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface px-space-md py-space-sm rounded transition-colors" data-path="danh-muc-dat-hang" href="#">Danh mục đặt hàng</a><a class="font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface px-space-md py-space-sm rounded transition-colors" data-path="don-dat-hang-cua-toi" href="#">Đơn đặt hàng của tôi</a><a class="font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface px-space-md py-space-sm rounded transition-colors" data-path="ho-so-dai-ly" href="#">Hồ sơ đại lý</a></nav></div><div class="flex items-center gap-space-md"><div class="hidden sm:flex items-center gap-space-xs px-space-sm py-space-xs rounded bg-primary-fixed/40 text-on-primary-fixed-variant"><span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span><span class="font-label-sm text-label-sm font-semibold uppercase tracking-wider">Hoạt động</span></div><div class="flex items-center gap-space-sm pl-space-sm"><div class="hidden md:flex flex-col text-right"><span class="font-label-md text-label-md text-on-surface font-semibold">Đại lý Cấp 1 Đông Nam Bộ</span><span class="font-body-sm text-body-sm text-on-surface-variant">MST: 3603847291</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><a class="p-space-xs rounded hover:bg-surface-container-high text-on-surface-variant hover:text-error transition-colors" data-path="dang-nhap" href="#" title="Đăng xuất"><span class="material-symbols-outlined text-[20px]">logout</span></a></div></div></div></header><main class="w-full pt-20 bg-surface min-h-[calc(100vh-200px)]"><div class="flex flex-col w-full">
+<!-- Top Progress & Context Meta Strip -->
+<div class="w-full bg-surface-container-high px-gutter py-space-sm">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row md:items-center justify-between gap-space-sm font-label-sm text-label-sm">
+<div class="flex items-center gap-space-md flex-wrap">
+<span class="inline-flex items-center gap-space-xs font-semibold text-primary">
+<span class="material-symbols-outlined text-[16px] text-primary">verified_user</span>
+          CỔNG ĐẠI LÝ B2B — PHÂN HỆ TIẾP NHẬN ĐƠN SỈ
+        </span>
+<span class="text-outline-variant hidden sm:inline">/</span>
+<span class="text-on-surface-variant">Khu vực B: Dealer Order Intake (BRD v1.2 Compliant)</span>
+</div>
+<div class="flex items-center gap-space-lg">
+<span class="flex items-center gap-space-xs text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-secondary">schedule</span>
+          Thời gian phản hồi SLA tiêu chuẩn: <strong class="text-primary font-semibold">Tối đa 60 Phút</strong>
+</span>
+<span class="text-outline-variant hidden sm:inline">|</span>
+<span class="text-on-surface-variant font-mono">Phiên giao dịch: #TXN-2024-8849</span>
+</div>
+</div>
+</div>
+<div class="w-full max-w-7xl mx-auto px-gutter py-space-lg flex flex-col gap-space-lg">
+<!-- Executive Header with Agency Credentials -->
+<div class="w-full bg-surface-container-lowest p-space-lg rounded shadow-sm flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="bg-primary text-on-primary font-label-sm text-label-sm uppercase px-space-sm py-0.5 rounded tracking-wider">Hệ thống B2B</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Đồng Nai Brewery Commercial Node</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-primary tracking-tight">Tạo Yêu Cầu Đặt Hàng B2B (Order Intake)</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">Đăng ký sản lượng bia keg, bia đóng lon và nước giải khát theo định mức thương mại định kỳ.</p>
+</div>
+<!-- Verified Dealer Profile Pill Box -->
+<div class="bg-surface-container p-space-md rounded flex items-center gap-space-md">
+<div class="w-12 h-12 rounded bg-primary-container flex items-center justify-center text-primary-fixed">
+<span class="material-symbols-outlined text-[28px]">storefront</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-md text-label-md text-primary font-bold">NPP Đồ Uống Miền Đông</span>
+<span class="inline-flex items-center gap-0.5 px-space-xs py-0.5 bg-primary-fixed/50 text-on-primary-fixed-variant rounded text-[10px] font-semibold tracking-wide uppercase">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span> Hoạt động
+            </span>
+</div>
+<div class="flex items-center gap-space-sm font-label-sm text-label-sm text-on-surface-variant">
+<span>Mã đại lý: <strong class="text-on-surface font-mono">LTB-DL-360382</strong></span>
+<span>•</span>
+<span>Hạng: Cấp 1 Toàn Phần</span>
+</div>
+</div>
+</div>
+</div>
+<!-- MANDATORY BRD v1.2 ALERT BANNER (Warm Amber / Strict Policy Notice) -->
+<div class="w-full bg-secondary-container/20 p-space-md rounded shadow-sm flex items-start gap-space-md">
+<div class="w-10 h-10 rounded bg-secondary-container flex-shrink-0 flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined text-[24px]">gavel</span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="font-label-md text-label-md text-on-secondary-container uppercase tracking-wider font-bold">LƯU Ý NGHIỆP VỤ B2B BẮT BUỘC (QUY TRÌNH BRD v1.2)</span>
+<span class="px-space-xs py-0.5 bg-secondary text-on-secondary rounded text-[10px] uppercase font-bold tracking-widest">Nghiêm ngặt</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+<strong>Website không công bố giá đại lý và không cam kết tồn kho tự động.</strong> Số lượng quý khách gửi tại biểu mẫu này là <strong>yêu cầu đặt hàng</strong> (Purchase Request). Nhân viên phụ trách kinh doanh LTB (Account Representative) sẽ liên hệ trực tiếp để thẩm định hạn mức, áp dụng khung chiết khấu hợp đồng năm, thông báo số lượng thực tế tại kho Nhà máy Đồng Nai và cấp <strong>Bản Xác Nhận Đơn Hàng Chính Thức</strong> trong vòng <strong>60 phút</strong> làm việc.
+        </p>
+</div>
+</div>
+<!-- 4-Step Approval & Fulfillment Pipeline Status Indicator -->
+<div class="w-full bg-surface-container-low p-space-md rounded shadow-sm">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-md text-label-md text-primary uppercase tracking-wider font-bold flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px]">account_tree</span>
+          Quy Trình Chuyển Đổi Trạng Thái Yêu Cầu Thương Mại
+        </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Chuẩn ISO 9001:2015 B2B Supply Chain</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-space-sm relative">
+<!-- Step 1 -->
+<div class="bg-surface-container-lowest p-space-sm rounded shadow-sm flex flex-col gap-space-xs relative overflow-hidden">
+<div class="h-1 bg-secondary w-full absolute top-0 left-0"></div>
+<div class="flex items-center justify-between">
+<span class="font-mono text-xs font-bold text-secondary">BƯỚC 01</span>
+<span class="material-symbols-outlined text-secondary text-[18px]">send</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface font-bold">1. Đã gửi yêu cầu</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Hệ thống ghi nhận nhu cầu, cấp số phiếu PR tạm thời.</span>
+<span class="mt-space-xs inline-block text-[10px] uppercase font-semibold text-secondary font-mono tracking-wider">[ĐANG THỰC HIỆN]</span>
+</div>
+<!-- Step 2 -->
+<div class="bg-surface-container-lowest p-space-sm rounded shadow-sm flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-mono text-xs font-bold text-outline">BƯỚC 02</span>
+<span class="material-symbols-outlined text-outline text-[18px]">manage_search</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface font-semibold">2. Đang xem xét</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">NVKD thẩm tra tồn kho Đồng Nai &amp; biểu giá chiết khấu.</span>
+<span class="mt-space-xs inline-block text-[10px] uppercase font-semibold text-on-surface-variant font-mono tracking-wider">Thời hạn ≤ 60 phút</span>
+</div>
+<!-- Step 3 -->
+<div class="bg-surface-container-lowest p-space-sm rounded shadow-sm flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-mono text-xs font-bold text-outline">BƯỚC 03</span>
+<span class="material-symbols-outlined text-outline text-[18px]">edit_note</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface font-semibold">3. Chờ đối chiếu</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Đại lý tinh chỉnh số lượng hoặc xác nhận thay đổi (nếu có).</span>
+<span class="mt-space-xs inline-block text-[10px] uppercase font-semibold text-on-surface-variant font-mono tracking-wider">Tương tác 2 chiều</span>
+</div>
+<!-- Step 4 -->
+<div class="bg-surface-container-lowest p-space-sm rounded shadow-sm flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-mono text-xs font-bold text-outline">BƯỚC 04</span>
+<span class="material-symbols-outlined text-outline text-[18px]">check_circle</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface font-semibold">4. Đã xác nhận</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Phát hành Hợp đồng đơn hàng, lệnh điều phối xuất xe.</span>
+<span class="mt-space-xs inline-block text-[10px] uppercase font-semibold text-primary font-mono tracking-wider">Ký số &amp; Xuất xưởng</span>
+</div>
+</div>
+</div>
+<!-- Main Order Intake Workstation Grid (2 Columns: Catalog Table & Order Summary Panel) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- Left Column: Validated SKU Catalog Table (Col 8) -->
+<div class="lg:col-span-8 flex flex-col gap-space-md">
+<!-- Action Toolbar for the Order Grid -->
+<div class="bg-surface-container-lowest p-space-md rounded shadow-sm flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded bg-primary-container flex items-center justify-center text-primary-fixed">
+<span class="material-symbols-outlined text-[18px]">inventory_2</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-primary">Danh Mục Sản Phẩm Đặt Hàng Định Lượng</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Chọn số lượng thương mại. Giá tính theo phụ lục hợp đồng đại lý cấp 1.</p>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="px-space-sm py-1.5 rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm flex items-center gap-1 transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">file_download</span> Tải Biểu Mẫu Excel
+            </button>
+<button class="px-space-sm py-1.5 rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm flex items-center gap-1 transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">refresh</span> Đặt Lại Số Lượng
+            </button>
+</div>
+</div>
+<!-- SKU Table Container -->
+<div class="bg-surface-container-lowest rounded shadow-sm overflow-hidden">
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-high text-primary font-label-md text-label-md">
+<th class="py-space-md px-space-md font-bold uppercase tracking-wider">Thông Tin Mặt Hàng &amp; Quy Cách</th>
+<th class="py-space-md px-space-sm font-bold uppercase tracking-wider text-center">Trạng Thái Kho</th>
+<th class="py-space-md px-space-sm font-bold uppercase tracking-wider text-center">Đơn Vị Tính</th>
+<th class="py-space-md px-space-md font-bold uppercase tracking-wider text-center w-40">Số Lượng Yêu Cầu</th>
+<th class="py-space-md px-space-md font-bold uppercase tracking-wider text-right">Chính Sách Đơn Giá</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-high font-body-md text-body-md">
+<!-- SKU 1: LTB-KEG-AMB01 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-space-md px-space-md">
+<div class="flex items-start gap-space-sm">
+<div class="w-10 h-10 rounded bg-primary-container/20 flex-shrink-0 flex items-center justify-center text-primary mt-1">
+<span class="material-symbols-outlined text-[20px]">sports_bar</span>
+</div>
+<div class="flex flex-col gap-0.5">
+<span class="font-label-sm text-label-sm font-mono text-secondary font-bold">LTB-KEG-AMB01</span>
+<span class="font-label-lg text-label-lg font-bold text-on-surface">LTB Craft Amber Lager (Keg Inox 20L lạnh)</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">5.2% ABV • IBU 24 • Chuẩn bảo quản lạnh 2°C - 4°C • Van Sankey D</span>
+<div class="mt-1 flex items-center gap-space-xs text-xs text-on-secondary-fixed-variant bg-secondary-fixed/30 px-space-xs py-0.5 rounded w-fit">
+<span class="material-symbols-outlined text-[14px]">build</span>
+<span>Yêu cầu kỹ thuật: Hỗ trợ đầu nối chữ D tiêu chuẩn Đức</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-sm text-center align-top pt-space-lg">
+<span class="inline-flex items-center gap-1 px-space-xs py-0.5 rounded bg-primary-fixed/40 text-on-primary-fixed-variant font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span> Tiếp nhận dự kiến
+                    </span>
+</td>
+<td class="py-space-md px-space-sm text-center font-mono font-medium align-top pt-space-lg">Keg 20L</td>
+<td class="py-space-md px-space-md align-top pt-space-md">
+<div class="flex items-center justify-center gap-1 bg-surface-container rounded p-1">
+<button class="w-7 h-7 rounded bg-surface-container-lowest text-on-surface font-bold hover:bg-primary hover:text-on-primary transition-colors flex items-center justify-center text-sm" onclick="adjustQty('qty-keg-amb', -1)" type="button">-</button>
+<input class="w-14 text-center bg-transparent font-mono font-bold text-primary focus:outline-none" id="qty-keg-amb" min="0" onchange="updateSummary()" type="number" value="10"/>
+<button class="w-7 h-7 rounded bg-surface-container-lowest text-on-surface font-bold hover:bg-primary hover:text-on-primary transition-colors flex items-center justify-center text-sm" onclick="adjustQty('qty-keg-amb', 1)" type="button">+</button>
+</div>
+<span class="block text-center text-[11px] text-on-surface-variant mt-1">Tối thiểu: 5 Keg</span>
+</td>
+<td class="py-space-md px-space-md text-right align-top pt-space-lg">
+<div class="flex flex-col items-end">
+<span class="px-space-xs py-1 rounded bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm text-right font-medium">
+                        [NVKD báo giá theo khung chiết khấu HĐ]
+                      </span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Áp dụng HĐ Cấp 1 Đông Nam Bộ</span>
+</div>
+</td>
+</tr>
+<!-- SKU 2: LTB-KEG-WHT02 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-space-md px-space-md">
+<div class="flex items-start gap-space-sm">
+<div class="w-10 h-10 rounded bg-primary-container/20 flex-shrink-0 flex items-center justify-center text-primary mt-1">
+<span class="material-symbols-outlined text-[20px]">sports_bar</span>
+</div>
+<div class="flex flex-col gap-0.5">
+<span class="font-label-sm text-label-sm font-mono text-secondary font-bold">LTB-KEG-WHT02</span>
+<span class="font-label-lg text-label-lg font-bold text-on-surface">Golden Wheat Ale (Keg Sanitize 20L)</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">4.8% ABV • IBU 16 • Hương vỏ cam &amp; hạt ngò tây • Men bia tươi</span>
+<div class="mt-1 flex items-center gap-space-xs text-xs text-on-surface-variant">
+<span class="material-symbols-outlined text-[14px]">verified</span>
+<span>Đã tiệt trùng bằng hơi nhiệt cao áp trước khi nạp</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-sm text-center align-top pt-space-lg">
+<span class="inline-flex items-center gap-1 px-space-xs py-0.5 rounded bg-primary-fixed/40 text-on-primary-fixed-variant font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span> Tiếp nhận dự kiến
+                    </span>
+</td>
+<td class="py-space-md px-space-sm text-center font-mono font-medium align-top pt-space-lg">Keg 20L</td>
+<td class="py-space-md px-space-md align-top pt-space-md">
+<div class="flex items-center justify-center gap-1 bg-surface-container rounded p-1">
+<button class="w-7 h-7 rounded bg-surface-container-lowest text-on-surface font-bold hover:bg-primary hover:text-on-primary transition-colors flex items-center justify-center text-sm" onclick="adjustQty('qty-keg-wht', -1)" type="button">-</button>
+<input class="w-14 text-center bg-transparent font-mono font-bold text-primary focus:outline-none" id="qty-keg-wht" min="0" onchange="updateSummary()" type="number" value="5"/>
+<button class="w-7 h-7 rounded bg-surface-container-lowest text-on-surface font-bold hover:bg-primary hover:text-on-primary transition-colors flex items-center justify-center text-sm" onclick="adjustQty('qty-keg-wht', 1)" type="button">+</button>
+</div>
+<span class="block text-center text-[11px] text-on-surface-variant mt-1">Tối thiểu: 2 Keg</span>
+</td>
+<td class="py-space-md px-space-md text-right align-top pt-space-lg">
+<div class="flex flex-col items-end">
+<span class="px-space-xs py-1 rounded bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm text-right font-medium">
+                        [NVKD báo giá theo khung chiết khấu HĐ]
+                      </span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Áp dụng HĐ Cấp 1 Đông Nam Bộ</span>
+</div>
+</td>
+</tr>
+<!-- SKU 3: LTB-CAN-PIL24 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-space-md px-space-md">
+<div class="flex items-start gap-space-sm">
+<div class="w-10 h-10 rounded bg-secondary-fixed/40 flex-shrink-0 flex items-center justify-center text-secondary mt-1">
+<span class="material-symbols-outlined text-[20px]">view_column</span>
+</div>
+<div class="flex flex-col gap-0.5">
+<span class="font-label-sm text-label-sm font-mono text-secondary font-bold">LTB-CAN-PIL24</span>
+<span class="font-label-lg text-label-lg font-bold text-on-surface">Premium Pilsner Canned 330ml</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">5.0% ABV • Thùng carton chuẩn 24 lon nhôm • Pallet xếp 72 thùng</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Hạn dùng: 12 tháng kể từ ngày dập đáy lon</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-sm text-center align-top pt-space-lg">
+<span class="inline-flex items-center gap-1 px-space-xs py-0.5 rounded bg-primary-fixed/40 text-on-primary-fixed-variant font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span> Tiếp nhận dự kiến
+                    </span>
+</td>
+<td class="py-space-md px-space-sm text-center font-mono font-medium align-top pt-space-lg">Thùng (24 lon)</td>
+<td class="py-space-md px-space-md align-top pt-space-md">
+<div class="flex items-center justify-center gap-1 bg-surface-container rounded p-1">
+<button class="w-7 h-7 rounded bg-surface-container-lowest text-on-surface font-bold hover:bg-primary hover:text-on-primary transition-colors flex items-center justify-center text-sm" onclick="adjustQty('qty-can-pil', -5)" type="button">-</button>
+<input class="w-14 text-center bg-transparent font-mono font-bold text-primary focus:outline-none" id="qty-can-pil" min="0" onchange="updateSummary()" step="5" type="number" value="50"/>
+<button class="w-7 h-7 rounded bg-surface-container-lowest text-on-surface font-bold hover:bg-primary hover:text-on-primary transition-colors flex items-center justify-center text-sm" onclick="adjustQty('qty-can-pil', 5)" type="button">+</button>
+</div>
+<span class="block text-center text-[11px] text-on-surface-variant mt-1">Bội số: 5 thùng</span>
+</td>
+<td class="py-space-md px-space-md text-right align-top pt-space-lg">
+<div class="flex flex-col items-end">
+<span class="px-space-xs py-1 rounded bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm text-right font-medium">
+                        [NVKD báo giá theo khung chiết khấu HĐ]
+                      </span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Chiết khấu theo sản lượng tháng</span>
+</div>
+</td>
+</tr>
+<!-- SKU 4: LTB-BTL-STT24 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-space-md px-space-md">
+<div class="flex items-start gap-space-sm">
+<div class="w-10 h-10 rounded bg-secondary-fixed/40 flex-shrink-0 flex items-center justify-center text-secondary mt-1">
+<span class="material-symbols-outlined text-[20px]">liquor</span>
+</div>
+<div class="flex flex-col gap-0.5">
+<span class="font-label-sm text-label-sm font-mono text-secondary font-bold">LTB-BTL-STT24</span>
+<span class="font-label-lg text-label-lg font-bold text-on-surface">Dark Stout Artisanal 330ml</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">6.5% ABV • Chai thủy tinh hổ phách • Thùng 24 chai xách khay gỗ bọc</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Dòng bia cao cấp phục vụ nhà hàng, lounge</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-sm text-center align-top pt-space-lg">
+<span class="inline-flex items-center gap-1 px-space-xs py-0.5 rounded bg-primary-fixed/40 text-on-primary-fixed-variant font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span> Tiếp nhận dự kiến
+                    </span>
+</td>
+<td class="py-space-md px-space-sm text-center font-mono font-medium align-top pt-space-lg">Thùng (24 chai)</td>
+<td class="py-space-md px-space-md align-top pt-space-md">
+<div class="flex items-center justify-center gap-1 bg-surface-container rounded p-1">
+<button class="w-7 h-7 rounded bg-surface-container-lowest text-on-surface font-bold hover:bg-primary hover:text-on-primary transition-colors flex items-center justify-center text-sm" onclick="adjustQty('qty-btl-stt', -5)" type="button">-</button>
+<input class="w-14 text-center bg-transparent font-mono font-bold text-primary focus:outline-none" id="qty-btl-stt" min="0" onchange="updateSummary()" step="5" type="number" value="20"/>
+<button class="w-7 h-7 rounded bg-surface-container-lowest text-on-surface font-bold hover:bg-primary hover:text-on-primary transition-colors flex items-center justify-center text-sm" onclick="adjustQty('qty-btl-stt', 5)" type="button">+</button>
+</div>
+<span class="block text-center text-[11px] text-on-surface-variant mt-1">Bội số: 5 thùng</span>
+</td>
+<td class="py-space-md px-space-md text-right align-top pt-space-lg">
+<div class="flex flex-col items-end">
+<span class="px-space-xs py-1 rounded bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm text-right font-medium">
+                        [NVKD báo giá theo khung chiết khấu HĐ]
+                      </span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Áp dụng HĐ Cấp 1 Đông Nam Bộ</span>
+</div>
+</td>
+</tr>
+<!-- SKU 5: LTB-WTR-ION500 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-space-md px-space-md">
+<div class="flex items-start gap-space-sm">
+<div class="w-10 h-10 rounded bg-primary-fixed/50 flex-shrink-0 flex items-center justify-center text-primary mt-1">
+<span class="material-symbols-outlined text-[20px]">water_drop</span>
+</div>
+<div class="flex flex-col gap-0.5">
+<span class="font-label-sm text-label-sm font-mono text-secondary font-bold">LTB-WTR-ION500</span>
+<span class="font-label-lg text-label-lg font-bold text-on-surface">Nước Khoáng Ion Kiềm Long Thành 500ml</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Độ pH 8.5 - 9.0 • Khai thác nguồn ngầm tự nhiên Long Thành • Thùng 24 chai PET</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Sản phẩm đối ứng không cồn cho hệ thống quán</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-sm text-center align-top pt-space-lg">
+<span class="inline-flex items-center gap-1 px-space-xs py-0.5 rounded bg-primary-fixed/40 text-on-primary-fixed-variant font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span> Tiếp nhận dự kiến
+                    </span>
+</td>
+<td class="py-space-md px-space-sm text-center font-mono font-medium align-top pt-space-lg">Thùng (24 chai)</td>
+<td class="py-space-md px-space-md align-top pt-space-md">
+<div class="flex items-center justify-center gap-1 bg-surface-container rounded p-1">
+<button class="w-7 h-7 rounded bg-surface-container-lowest text-on-surface font-bold hover:bg-primary hover:text-on-primary transition-colors flex items-center justify-center text-sm" onclick="adjustQty('qty-wtr-ion', -5)" type="button">-</button>
+<input class="w-14 text-center bg-transparent font-mono font-bold text-primary focus:outline-none" id="qty-wtr-ion" min="0" onchange="updateSummary()" step="5" type="number" value="30"/>
+<button class="w-7 h-7 rounded bg-surface-container-lowest text-on-surface font-bold hover:bg-primary hover:text-on-primary transition-colors flex items-center justify-center text-sm" onclick="adjustQty('qty-wtr-ion', 5)" type="button">+</button>
+</div>
+<span class="block text-center text-[11px] text-on-surface-variant mt-1">Bội số: 5 thùng</span>
+</td>
+<td class="py-space-md px-space-md text-right align-top pt-space-lg">
+<div class="flex flex-col items-end">
+<span class="px-space-xs py-1 rounded bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm text-right font-medium">
+                        [NVKD báo giá theo khung chiết khấu HĐ]
+                      </span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Sản phẩm phụ trợ phân phối kèm</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Bottom Notice within Table Container -->
+<div class="p-space-md bg-surface-container-low flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm text-on-surface-variant font-body-sm text-body-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-secondary">info</span>
+<span>Đơn vị tính quy chuẩn xuất kho: 1 Keg = 20 Lít | 1 Thùng = 24 Đơn vị đóng chai/lon.</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="font-mono text-xs">Cập nhật kiểm tra kho lúc: 14:35 GMT+7</span>
+</div>
+</div>
+</div>
+<!-- Technical Specification & Equipment Support Box -->
+<div class="bg-surface-container-lowest p-space-md rounded shadow-sm flex flex-col md:flex-row items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 rounded bg-surface-container flex items-center justify-center text-secondary flex-shrink-0">
+<span class="material-symbols-outlined text-[28px]">propane_tank</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface font-bold">Hỗ Trợ Thiết Bị Chiết Rót &amp; Bình Khí CO2 Thực Phẩm</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Đại lý có thể yêu cầu mượn vỏ keg bổ sung, bộ điều áp (Regulator), hoặc bình CO2 thực phẩm đi kèm theo xe bốc hàng từ kho.</p>
+</div>
+</div>
+<div class="flex items-center gap-space-xs flex-shrink-0">
+<span class="px-space-sm py-1 rounded bg-secondary-fixed/50 text-on-secondary-fixed-variant font-label-sm text-label-sm font-semibold">
+              Hỗ trợ kỹ thuật 24/7
+            </span>
+</div>
+</div>
+</div>
+<!-- Right Column: Order Summary & Submission Commitment Form (Col 4) -->
+<div class="lg:col-span-4 flex flex-col gap-space-md">
+<div class="bg-surface-container-lowest p-space-lg rounded shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">assignment</span>
+<h3 class="font-headline-sm text-headline-sm text-primary">Tóm Tắt Yêu Cầu Đặt Hàng</h3>
+</div>
+<span class="font-label-sm text-label-sm px-space-xs py-0.5 rounded bg-surface-container text-on-surface-variant font-mono">
+              BẢN THẢO PR
+            </span>
+</div>
+<!-- Summary Metric Cards -->
+<div class="grid grid-cols-2 gap-space-sm">
+<div class="bg-surface-container p-space-sm rounded flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Tổng số SKU</span>
+<span class="font-headline-md text-headline-md text-primary font-bold">5 Mã hàng</span>
+</div>
+<div class="bg-surface-container p-space-sm rounded flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Tổng dung tích quy đổi</span>
+<span class="font-headline-md text-headline-md text-secondary font-bold">~ 1,114 Lít</span>
+</div>
+</div>
+<!-- Total Breakdown Details -->
+<div class="bg-surface-container-low p-space-md rounded flex flex-col gap-space-xs font-body-sm text-body-sm">
+<div class="flex justify-between items-center text-on-surface">
+<span class="font-medium">Tổng bia Keg (20L Lạnh):</span>
+<strong class="font-mono font-bold text-primary" id="summary-keg">15 Keg 20L</strong>
+</div>
+<div class="flex justify-between items-center text-on-surface">
+<span class="font-medium">Tổng Thùng thành phẩm (Lon/Chai):</span>
+<strong class="font-mono font-bold text-primary" id="summary-pkg">100 Thùng</strong>
+</div>
+<div class="w-full h-px bg-surface-container-high my-1"></div>
+<div class="flex justify-between items-center text-on-surface">
+<span class="font-medium">Hình thức thanh toán B2B:</span>
+<span class="font-label-sm text-label-sm font-semibold text-secondary">Bảo lãnh / Công nợ 30 ngày</span>
+</div>
+<div class="flex justify-between items-center text-on-surface-variant text-xs">
+<span>Đơn giá &amp; Thành tiền:</span>
+<span class="italic text-on-secondary-fixed-variant">[Xác nhận qua NVKD]</span>
+</div>
+</div>
+<!-- Delivery Logistics Form -->
+<div class="flex flex-col gap-space-sm">
+<span class="font-label-md text-label-md text-primary uppercase tracking-wider font-semibold">Thông Tin Điều Phối &amp; Nhận Hàng</span>
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface font-semibold flex items-center justify-between">
+<span>Địa điểm nhận hàng của đại lý:</span>
+<span class="text-xs text-secondary font-normal underline cursor-pointer">Thay đổi kho</span>
+</label>
+<div class="p-space-sm bg-surface-container rounded flex items-start gap-space-xs text-on-surface font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[18px] text-primary mt-0.5">warehouse</span>
+<div>
+<span class="font-semibold block text-primary">Kho Tổng NPP Miền Đông</span>
+<span class="text-on-surface-variant text-xs">Đường số 3, KCN Long Thành, Xã Tam An, Huyện Long Thành, Đồng Nai</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface font-semibold" for="delivery-date">
+                Thời gian mong muốn nhận hàng (Khung 24h - 48h):
+              </label>
+<div class="relative">
+<input class="w-full bg-surface-container px-space-sm py-2 rounded text-on-surface font-label-md text-label-md focus:bg-surface-container-lowest focus:ring-1 focus:ring-primary outline-none" id="delivery-date" type="date" value="2024-11-20"/>
+</div>
+<span class="text-[11px] text-on-surface-variant italic">Nhà máy cần tối thiểu 24h để làm lạnh sâu bia keg đạt chuẩn 2°C trước khi lên xe.</span>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface font-semibold" for="coordination-note">
+                Ghi chú điều phối &amp; Thiết bị mượn kèm:
+              </label>
+<textarea class="w-full bg-surface-container p-space-sm rounded text-on-surface font-body-sm text-body-sm focus:bg-surface-container-lowest focus:ring-1 focus:ring-primary outline-none resize-none" id="coordination-note" rows="3">Cần mượn thêm 02 bình khí CO2 thực phẩm &amp; kiểm tra van khóa Keg Inox trước khi niêm phong niêm chì thùng xe.</textarea>
+</div>
+</div>
+<!-- Mandatory Business Commitment Checkbox -->
+<div class="bg-surface-container-high/60 p-space-sm rounded flex items-start gap-space-sm">
+<input checked="" class="w-5 h-5 rounded mt-0.5 text-primary focus:ring-0 cursor-pointer accent-primary" id="commitment-check" type="checkbox"/>
+<label class="font-body-sm text-body-sm text-on-surface leading-tight cursor-pointer select-none" for="commitment-check">
+              Tôi xác nhận gửi bản đăng ký nhu cầu đặt hàng và hiểu rằng đơn hàng chỉ có hiệu lực thương mại sau khi <strong>Nhân viên Kinh doanh LTB xác nhận chính thức</strong>.
+            </label>
+</div>
+<!-- Action Button Stack -->
+<div class="flex flex-col gap-space-xs pt-space-xs">
+<!-- Submit Primary Action Button -->
+<button class="w-full py-space-sm px-space-md rounded bg-secondary hover:bg-secondary/90 text-on-secondary font-label-lg text-label-lg font-bold flex items-center justify-center gap-space-xs shadow-sm transition-all" id="btn-submit" onclick="submitRequest()" type="button">
+<span class="material-symbols-outlined text-[20px]">send_and_archive</span>
+<span>Gửi Yêu Cầu Đặt Hàng (Submit Request)</span>
+</button>
+<div class="grid grid-cols-2 gap-space-xs mt-1">
+<!-- Save Draft Button -->
+<button class="w-full py-2 px-space-sm rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md font-semibold flex items-center justify-center gap-1 transition-colors" onclick="saveDraft()" type="button">
+<span class="material-symbols-outlined text-[16px]">bookmark_border</span>
+<span>Lưu Bản Nháp</span>
+</button>
+<!-- Order History Button -->
+<a class="w-full py-2 px-space-sm rounded bg-surface-container hover:bg-surface-container-high text-primary font-label-md text-label-md font-semibold flex items-center justify-center gap-1 transition-colors" data-path="don-dat-hang-cua-toi" href="#">
+<span class="material-symbols-outlined text-[16px]">history</span>
+<span>Lịch Sử Đơn</span>
+</a>
+</div>
+</div>
+<!-- Representative Contact Support Box -->
+<div class="pt-space-sm flex items-center gap-space-sm text-on-surface-variant font-label-sm text-label-sm">
+<div class="w-8 h-8 rounded-full bg-primary-container flex items-center justify-center text-primary-fixed flex-shrink-0">
+<span class="material-symbols-outlined text-[16px]">support_agent</span>
+</div>
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface">Đại diện Kinh Doanh LTB phụ trách:</span>
+<span>Lê Hoàng Vũ (Phụ trách NPP Miền Đông) — Ext: 104</span>
+</div>
+</div>
+</div>
+<!-- Compliance & Regulatory Quality Box -->
+<div class="bg-surface-container-lowest p-space-md rounded shadow-sm flex flex-col gap-space-xs font-body-sm text-body-sm text-on-surface-variant">
+<div class="flex items-center gap-space-xs text-primary font-label-md text-label-md font-bold">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span>Cam Kết Xuất Hàng Từ Nhà Máy Đồng Nai</span>
+</div>
+<p class="text-xs leading-relaxed">
+            Mọi lô hàng keg đều được kiểm định áp suất và làm lạnh tĩnh 24h trước khi cấp lệnh bàn giao. Đại lý có quyền từ chối nhận nếu tem niêm phong van keg bị rách hoặc nhiệt độ thùng xe vượt quá 8°C.
+          </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Client-side Interactive Behaviors -->
+<script>
+    function adjustQty(inputId, delta) {
+      const input = document.getElementById(inputId);
+      if (!input) return;
+      let val = parseInt(input.value || '0', 10);
+      val = Math.max(0, val + delta);
+      input.value = val;
+      updateSummary();
+    }
+
+    function updateSummary() {
+      const kegAmb = parseInt(document.getElementById('qty-keg-amb')?.value || '0', 10);
+      const kegWht = parseInt(document.getElementById('qty-keg-wht')?.value || '0', 10);
+      const canPil = parseInt(document.getElementById('qty-can-pil')?.value || '0', 10);
+      const btlStt = parseInt(document.getElementById('qty-btl-stt')?.value || '0', 10);
+      const wtrIon = parseInt(document.getElementById('qty-wtr-ion')?.value || '0', 10);
+
+      const totalKegs = kegAmb + kegWht;
+      const totalPackages = canPil + btlStt + wtrIon;
+
+      const kegEl = document.getElementById('summary-keg');
+      const pkgEl = document.getElementById('summary-pkg');
+
+      if (kegEl) kegEl.innerText = totalKegs + ' Keg 20L';
+      if (pkgEl) pkgEl.innerText = totalPackages + ' Thùng';
+    }
+
+    function submitRequest() {
+      const check = document.getElementById('commitment-check');
+      if (!check || !check.checked) {
+        alert('Vui lòng chọn xác nhận vào ô cam kết trước khi gửi yêu cầu đặt hàng thương mại.');
+        return;
+      }
+      const btn = document.getElementById('btn-submit');
+      if (btn) {
+        btn.innerHTML = '<span class="material-symbols-outlined text-[20px] animate-spin">refresh</span><span>Đang Chuyển Yêu Cầu...</span>';
+        btn.classList.add('opacity-80', 'pointer-events-none');
+      }
+
+      setTimeout(() => {
+        alert('Thành công! Yêu cầu đặt hàng sỉ #PR-2024-8849 đã được chuyển đến Nhân viên Kinh doanh phụ trách đại lý NPP Đồ Uống Miền Đông. SLA xác nhận trong vòng 60 phút.');
+        if (btn) {
+          btn.innerHTML = '<span class="material-symbols-outlined text-[20px]">check_circle</span><span>Đã Tiếp Nhận Thành Công</span>';
+          btn.classList.remove('bg-secondary', 'hover:bg-secondary/90');
+          btn.classList.add('bg-primary-container', 'text-on-primary-fixed');
+        }
+      }, 1000);
+    }
+
+    function saveDraft() {
+      alert('Đã lưu bản nháp yêu cầu đặt hàng tạm thời trên hệ thống nội bộ của đại lý.');
+    }
+  </script>
+</div></main><footer class="w-full bg-surface-container-low mt-space-xl shadow-[0_-1px_6px_rgba(0,0,0,0.02)]"><div class="w-full px-gutter py-space-xl"><div class="grid grid-cols-1 md:grid-cols-12 gap-gutter"><div class="md:col-span-5 flex flex-col gap-space-sm"><div class="flex items-center gap-space-sm"><div class="w-7 h-7 rounded bg-primary-container flex items-center justify-center text-primary-fixed font-label-md text-label-md font-bold">LTB</div><span class="font-headline-sm text-headline-sm text-primary font-bold">CÔNG TY TNHH BIA LONG THÀNH</span></div><p class="font-body-sm text-body-sm text-on-surface-variant max-w-lg">Hệ thống phân phối bán buôn và quản lý đối tác thương mại chuyên nghiệp. Cung ứng các dòng bia chất lượng cao từ Nhà máy Bia Long Thành tới hệ thống đại lý F&amp;B toàn quốc.</p><div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm"><span class="material-symbols-outlined text-[16px]">location_on</span><span>Khu Công Nghiệp Lộc An - Bình Sơn, Xã Bình Sơn, Huyện Long Thành, Đồng Nai</span></div></div><div class="md:col-span-3 flex flex-col gap-space-sm"><span class="font-label-lg text-label-lg text-on-surface uppercase tracking-wider font-semibold">Đầu mối B2B &amp; Điều hành</span><div class="flex flex-col gap-space-xs font-body-sm text-body-sm text-on-surface-variant"><span class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[16px] text-secondary">phone_in_talk</span>Hotline Đại lý: <strong class="text-on-surface">0899 447 181</strong></span><span class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[16px] text-secondary">mail</span>Email: sales@bialongthanh.vn</span><span class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[16px] text-secondary">schedule</span>Giờ tiếp nhận xe kho: 07:30 - 17:00</span></div></div><div class="md:col-span-4 flex flex-col gap-space-sm"><span class="font-label-lg text-label-lg text-on-surface uppercase tracking-wider font-semibold">Khuyến cáo Pháp lý Nghiệp vụ</span><p class="font-body-sm text-body-sm text-on-surface-variant bg-surface-container p-space-sm rounded">Uống rượu, bia có thể gây tai nạn giao thông. Uống rượu, bia có thể ảnh hưởng đến sức khỏe thai nhi. Người dưới 18 tuổi không được uống rượu, bia. Cổng thông tin nội bộ dành riêng cho tổ chức, doanh nghiệp và đại lý phân phối có giấy phép bán buôn rượu bia hợp lệ.</p></div></div><div class="mt-space-xl pt-space-md bg-surface-container-high/50 -mx-gutter px-gutter flex flex-col sm:flex-row items-center justify-between gap-space-sm font-label-sm text-label-sm text-on-surface-variant"><span>© 2024 CÔNG TY TNHH BIA LONG THÀNH (LTB Co., Ltd). Bảo lưu mọi quyền đối tác.</span><span>Phiên bản Cổng Đại lý v2.4 - Đồng Nai Factory B2B Gateway</span></div></div></footer></body></html>
