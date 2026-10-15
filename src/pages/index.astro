@@ -1,605 +1,1005 @@
 ---
-import LeadForm from '../components/LeadForm.astro';
 import PublicLayout from '../layouts/PublicLayout.astro';
+import { SITE } from '../lib/site';
 ---
-<PublicLayout title="Long Thanh Beer (LTB) - Cổng Phân Phối Thương Mại B2B" bodyClass="bg-background font-body-md text-on-surface antialiased selection:bg-secondary-container selection:text-on-secondary-container" active="trang-chu">
-<main class="w-full pt-20 bg-background"><div class="flex flex-col w-full">
-<!-- 1. HERO SECTION -->
-<section class="relative w-full -mt-20 overflow-hidden bg-tertiary">
-<!-- Hero Visual Background with Deep Forest & Charcoal Scrim -->
-<div class="absolute inset-0 bg-cover bg-center mix-blend-luminosity opacity-40 transition-transform duration-1000 ease-out" style="background-image: url('/images/stitch/8e4e82bf92.jpg');"></div>
-<div class="absolute inset-0 bg-primary-container/90"></div>
-<!-- Editorial Hero Layout -->
-<div class="relative w-full px-gutter-mobile md:px-margin-tablet lg:px-margin pt-36 pb-20 lg:pt-44 lg:pb-28">
-<div class="max-w-5xl flex flex-col gap-space-lg">
-<!-- Monospaced Metadata Marker -->
-<div class="inline-flex items-center gap-space-sm w-fit px-space-sm py-1 rounded bg-surface-container-lowest/10">
-<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
-<span class="font-label-sm text-surface uppercase tracking-widest font-semibold">Cổng Phân Phối Thương Mại B2B — Đồng Nai</span>
-</div>
-<div class="flex flex-col gap-space-md">
-<h1 class="font-display-lg text-surface tracking-tight uppercase max-w-4xl leading-tight">
-            ĐỒNG HÀNH PHÁT TRIỂN <br class="hidden sm:inline">
-<span class="text-secondary-fixed">THỊ TRƯỜNG ĐỒ UỐNG</span>
-</h1>
-<p class="font-body-lg text-surface-container-high/90 max-w-2xl leading-relaxed">
-            LONG THANH BEER COMPANY LIMITED — Kết nối sản phẩm, đối tác và cơ hội kinh doanh bền vững trong lĩnh vực phân phối bán buôn đồ uống chuyên nghiệp.
+
+<PublicLayout
+  title="Bia Long Thành (LTB) — Nhà Phân Phối Bia & Đồ Uống Uy Tín Tại Long Thành, Đồng Nai"
+  bodyClass="bg-[#faf9f6] font-sans text-[#0e0e0e] antialiased selection:bg-[#B68D2E] selection:text-black overflow-x-hidden"
+  active="trang-chu"
+>
+  <div class="min-h-screen w-full bg-[#faf9f6] text-[#0e0e0e] overflow-clip selection:bg-[#B68D2E] selection:text-black max-w-[100vw]">
+    
+    <!-- SECTION 1: HERO SHOWCASE (#trang-chu) -->
+    <section id="trang-chu" class="relative pt-[72px] lg:pt-[76px] bg-[#0E0E0E] text-[#faf9f6] overflow-hidden">
+      <!-- Background SVG Noise -->
+      <div
+        class="absolute inset-0 opacity-[0.04] pointer-events-none"
+        style="background-image: url('data:image/svg+xml,%3Csvg viewBox=\'0 0 256 256\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cfilter id=\'noiseFilter\'%3E%3CfeTurbulence type=\'fractalNoise\' baseFrequency=\'0.9\' numOctaves=\'4\' stitchTiles=\'stitch\'/%3E%3C/filter%3E%3Crect width=\'100%25\' height=\'100%25\' filter=\'url(%23noiseFilter)\'/%3E%3C/svg%3E');"
+      ></div>
+
+      <!-- Radial dots texture -->
+      <div
+        class="absolute inset-0 opacity-[0.06]"
+        style="background-image: radial-gradient(circle at 1px 1px, #D4AA4A 1px, transparent 0); background-size: 28px 28px;"
+      ></div>
+
+      <!-- Ambient glow lights -->
+      <div class="absolute -top-[30%] -right-[15%] h-[780px] w-[780px] rounded-full bg-[radial-gradient(circle_at_center,rgba(182,141,46,0.28),transparent_68%)] blur-[1px]"></div>
+      <div class="absolute -bottom-[20%] -left-[10%] h-[600px] w-[600px] rounded-full bg-[radial-gradient(circle_at_center,rgba(140,107,31,0.18),transparent_70%)] blur-[2px]"></div>
+
+      <!-- Watermark logos -->
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-[0.05] pointer-events-none select-none">
+        <img
+          src="/brand/ref-fA.png"
+          alt=""
+          aria-hidden="true"
+          class="h-[520px] lg:h-[720px] w-auto object-contain"
+          style="filter: drop-shadow(0 0 30px rgba(182,141,46,0.2));"
+        />
+      </div>
+      <div class="absolute top-[92px] right-4 lg:right-[6%] opacity-[0.04] pointer-events-none select-none hidden lg:block">
+        <img
+          src="/brand/ref-fA.png"
+          alt=""
+          aria-hidden="true"
+          class="h-[320px] w-auto object-contain"
+        />
+      </div>
+
+      <!-- Hero Grid Content -->
+      <div class="mx-auto max-w-[1240px] px-4 sm:px-6 lg:px-8 py-10 lg:py-[84px] grid lg:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)] gap-10 items-center relative">
+        <!-- Left: Copy & CTAs -->
+        <div>
+          <!-- Badge 1 -->
+          <div class="inline-flex items-center gap-2 rounded-full border border-[#B68D2E]/30 bg-[#1a1912] px-3 py-1 text-[11px] tracking-[0.14em] uppercase font-bold text-[#D4AA4A]">
+            <span class="h-2 w-2 rounded-full bg-[#B68D2E] animate-pulse"></span>
+            <span>Hoạt động từ 2021 • MST 3603823707 • Đã cập nhật địa chỉ mới</span>
+          </div>
+
+          <!-- Badge 2 -->
+          <div class="mt-4 inline-flex items-center gap-2.5 rounded-full border border-[#B68D2E] bg-[#1e1c12] px-3.5 py-1.5 text-[11px] tracking-[0.16em] uppercase font-bold text-[#D4AA4A] shadow-[0_0_0_3px_rgba(182,141,46,0.08)]">
+            <img
+              src="/brand/ref-fA.png"
+              alt=""
+              aria-hidden="true"
+              class="h-[18px] w-auto object-contain"
+              style="filter: drop-shadow(0 1px 2px rgba(182,141,46,0.4));"
+            />
+            <span>LTB • MST 3603823707 • LOGO VÀNG #B68D2E TRONG SUỐT</span>
+          </div>
+
+          <!-- Main Heading -->
+          <h1 class="mt-6 font-black leading-[0.92] tracking-[-0.03em] text-[32px] sm:text-[44px] lg:text-[54px] uppercase">
+            NHÀ PHÂN PHỐI <span class="gold-text-gradient">BIA &amp; ĐỒ UỐNG</span> UY TÍN TẠI LONG THÀNH - ĐỒNG NAI
+          </h1>
+
+          <!-- Body intro -->
+          <p class="mt-5 text-[15px] lg:text-[16px] leading-[1.7] text-[#c9c2ab] max-w-[560px]">
+            Công ty TNHH Bia Long Thành - MST <span class="text-white font-semibold">3603823707</span> - Chuyên bán buôn đồ uống có cồn, không cồn, thuốc lá. Giao hàng nhanh 24/7 tại Long Phước, Nhơn Trạch, Biên Hòa. Đầy đủ hóa đơn VAT, nguồn hàng chính hãng.
           </p>
-</div>
-<!-- CTA Buttons -->
-<div class="flex flex-wrap items-center gap-space-md pt-space-xs">
-<a class="inline-flex items-center gap-space-sm px-space-xl py-3.5 rounded bg-secondary text-surface font-label-lg uppercase tracking-wider hover:bg-secondary-fixed transition-colors font-bold border border-outline-variant/40" href="#hop-tac">
-<span class="">Kết nối hợp tác</span>
-<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
-</a>
-<a class="inline-flex items-center gap-space-sm px-space-lg py-3.5 rounded bg-surface/10 hover:bg-surface/20 text-surface font-label-lg uppercase tracking-wider transition-colors" href="#gioi-thieu">
-<span class="">Khám phá doanh nghiệp</span>
-<span class="material-symbols-outlined text-[18px]">business</span>
-</a>
-</div>
-<!-- Verified Credential Ribbon -->
-<div class="pt-space-lg mt-space-md grid grid-cols-1 sm:grid-cols-3 gap-space-md">
-<div class="flex items-center gap-space-sm bg-surface-container-lowest/5 p-space-sm rounded">
-<span class="material-symbols-outlined text-secondary-fixed text-[20px]">verified</span>
-<div class="flex flex-col">
-<span class="font-label-sm text-surface-variant uppercase tracking-wider">Mã số thuế ĐKKD</span>
-<span class="font-label-md text-surface font-semibold tracking-wider">3603823707</span>
-</div>
-</div>
-<div class="flex items-center gap-space-sm bg-surface-container-lowest/5 p-space-sm rounded">
-<span class="material-symbols-outlined text-secondary-fixed text-[20px]">pin_drop</span>
-<div class="flex flex-col">
-<span class="font-label-sm text-surface-variant uppercase tracking-wider">Địa bàn trọng điểm</span>
-<span class="font-label-md text-surface font-semibold">Đồng Nai &amp; Phía Nam</span>
-</div>
-</div>
-<div class="flex items-center gap-space-sm bg-surface-container-lowest/5 p-space-sm rounded">
-<span class="material-symbols-outlined text-secondary-fixed text-[20px]">local_shipping</span>
-<div class="flex flex-col">
-<span class="font-label-sm text-surface-variant uppercase tracking-wider">Hạ tầng vận hành</span>
-<span class="font-label-md text-surface font-semibold">Kho Bãi &amp; Giao 24-48h</span>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- 2. CORPORATE INTRODUCTION (EDITORIAL SPLIT LAYOUT) -->
-<section class="w-full py-space-xl bg-background" id="gioi-thieu">
-<div class="w-full px-gutter-mobile md:px-margin-tablet lg:px-margin">
-<!-- Section Tag -->
-<div class="flex items-center gap-space-sm mb-space-sm">
-<span class="w-8 h-px bg-secondary"></span>
-<span class="font-label-sm text-secondary font-bold uppercase tracking-widest">Hồ Sơ Năng Lực Doanh Nghiệp</span>
-</div>
-<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-start">
-<!-- Left Column: Editorial Statement -->
-<div class="lg:col-span-7 flex flex-col gap-space-md">
-<h2 class="font-headline-xl text-primary font-bold tracking-tight">
-            Vững nền tảng. <br>
-<span class="text-on-surface-variant font-normal">Mở rộng kết nối thị trường.</span>
-</h2>
-<div class="flex flex-col gap-space-sm text-on-surface font-body-lg leading-relaxed">
-<p class="">
-<strong>CÔNG TY TNHH BIA LONG THÀNH (LTB)</strong> là đơn vị kinh doanh hợp pháp được thành lập theo quy định pháp luật Việt Nam, chuyên sâu trong lĩnh vực phân phối bán buôn đồ uống và dịch vụ cung ứng chuỗi thương mại tại khu vực Đồng Nai cùng vùng phụ cận.
-            </p>
-<p class="text-on-surface-variant">
-              Chúng tôi xem kỷ luật vận hành, pháp lý minh bạch và đạo đức thương trường là nền móng cốt lõi. Bằng sự am hiểu thị hiếu ẩm thực cùng mạng lưới kho vận tối ưu, LTB đồng hành trực tiếp cùng hệ thống nhà hàng, khách sạn cao cấp, quán bar, đại lý chuyên tuyến và chuỗi bán lẻ để đem tới nguồn sản phẩm đạt chuẩn, ổn định và hiệu quả kinh tế lâu bền.
-            </p>
-</div>
-<!-- Editorial Quote Block -->
-<div class="p-space-md rounded bg-surface-container-low border border-outline-variant/40">
-<p class="font-body-md text-primary font-medium italic">
-              "Minh bạch trong từng hoá đơn chứng từ, cam kết đúng hẹn trong từng chuyến hàng, tối đa hóa lợi ích dài hạn cho từng đối tác phân phối."
-            </p>
-<div class="flex items-center gap-space-xs mt-space-sm font-label-sm text-on-surface-variant">
-<span class="font-semibold text-primary">Ban Giám Đốc LTB</span>
-<span class="">— Cam kết thương mại B2B</span>
-</div>
-</div>
-</div>
-<!-- Right Column: Strategic Pillars & Action -->
-<div class="lg:col-span-5 flex flex-col gap-space-md bg-surface-container-lowest p-space-lg rounded border border-outline-variant/40">
-<h3 class="font-headline-sm text-primary uppercase font-bold tracking-tight">
-            Trụ Cột Năng Lực Cốt Lõi
-          </h3>
-<div class="flex flex-col gap-space-md">
-<div class="flex items-start gap-space-sm">
-<div class="w-10 h-10 rounded bg-primary-container/10 flex items-center justify-center shrink-0">
-<span class="material-symbols-outlined text-primary text-[22px]">policy</span>
-</div>
-<div class="flex flex-col">
-<span class="font-label-lg text-primary font-bold">Pháp lý &amp; Chứng nhận minh bạch</span>
-<span class="font-body-sm text-on-surface-variant mt-0.5">Đầy đủ hồ sơ tự công bố, giấy phép phân phối có cồn, kiểm định KCS và hóa đơn VAT chuẩn chỉnh từng lô hàng.</span>
-</div>
-</div>
-<div class="flex items-start gap-space-sm">
-<div class="w-10 h-10 rounded bg-secondary-container/20 flex items-center justify-center shrink-0">
-<span class="material-symbols-outlined text-secondary text-[22px]">hub</span>
-</div>
-<div class="flex flex-col">
-<span class="font-label-lg text-primary font-bold">Mạng lưới phân phối linh hoạt</span>
-<span class="font-body-sm text-on-surface-variant mt-0.5">Tối ưu hóa hành trình giao hàng từ Long Thành tới các cụm đô thị kinh tế Biên Hòa, TP.HCM, Bình Dương và Bà Rịa - Vũng Tàu.</span>
-</div>
-</div>
-<div class="flex items-start gap-space-sm">
-<div class="w-10 h-10 rounded bg-surface-container-high flex items-center justify-center shrink-0">
-<span class="material-symbols-outlined text-on-surface-variant text-[22px]">verified_user</span>
-</div>
-<div class="flex flex-col">
-<span class="font-label-lg text-primary font-bold">Cam kết nguồn gốc xuất xứ</span>
-<span class="font-body-sm text-on-surface-variant mt-0.5">100% sản phẩm có tem nhãn hợp chuẩn, quy cách bảo quản nhiệt độ và hạn dùng kiểm soát tự động theo mẻ xuất.</span>
-</div>
-</div>
-</div>
-<div class="pt-space-sm">
-<a class="w-full inline-flex items-center justify-center gap-space-xs px-space-md py-3 rounded bg-primary text-on-primary font-label-lg uppercase tracking-wider hover:bg-primary-container transition-colors font-semibold border border-outline-variant/40" href="#thong-tin-phap-ly">
-<span class="">Xem hồ sơ thẩm định pháp lý</span>
-<span class="material-symbols-outlined text-[16px]">chevron_right</span>
-</a>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- 3. BUSINESS ACTIVITIES (LĨNH VỰC HOẠT ĐỘNG CHÍNH) -->
-<section class="w-full py-space-xl bg-surface-container-low">
-<div class="w-full px-gutter-mobile md:px-margin-tablet lg:px-margin">
-<!-- Section Header -->
-<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md mb-space-lg">
-<div class="flex flex-col gap-space-xs max-w-2xl">
-<div class="flex items-center gap-space-sm">
-<span class="w-8 h-px bg-secondary"></span>
-<span class="font-label-sm text-secondary font-bold uppercase tracking-widest">Danh Mục Cung Ứng B2B</span>
-</div>
-<h2 class="font-headline-xl text-primary font-bold tracking-tight">
-            Lĩnh Vực Hoạt Động Doanh Nghiệp
-          </h2>
-<p class="font-body-md text-on-surface-variant">
-            Danh mục thương mại chuyên nghiệp theo giấy chứng nhận đăng ký kinh doanh được cấp phép, phục vụ chuỗi cung ứng sỉ và đối tác liên kết.
-          </p>
-</div>
-<div class="inline-flex items-center gap-2 px-space-sm py-1 rounded bg-surface-container-highest text-primary font-label-sm font-bold uppercase tracking-widest">
-<span class="material-symbols-outlined text-[16px]">inventory_2</span>
-          B2B Wholesale Catalog
-        </div>
-</div>
-<!-- 3 Business Categories Cards -->
-<div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg">
-<!-- Card 1: Alcoholic Beverages -->
-<div class="group flex flex-col bg-surface-container-lowest rounded overflow-hidden transition-shadow border border-outline-variant/40 hover:border-primary-container">
-<div class="relative h-48 w-full overflow-hidden bg-primary-container">
-<img class="w-full h-full object-cover transition-transform duration-500 opacity-90" data-alt="Modern craft brewery barrels and chilled golden beer glasses in a warm amber ambient cellar setting, representing commercial wholesale beer supply in Long Thanh, Vietnam, high quality corporate food and beverage imagery." src="/images/stitch/8452fd575f.jpg">
-<div class="absolute inset-0 bg-primary/80"></div>
-<div class="absolute top-space-sm left-space-sm">
-<span class="px-space-xs py-0.5 rounded bg-surface text-primary font-label-sm font-bold uppercase tracking-wider border border-outline-variant/40">Mã ngành: 4633</span>
-</div>
-<div class="absolute bottom-space-sm left-space-sm right-space-sm">
-<span class="font-label-sm text-secondary-fixed uppercase tracking-wider font-semibold">Chủ lực thương mại</span>
-</div>
-</div>
-<div class="p-space-lg flex-1 flex flex-col justify-between gap-space-md">
-<div class="flex flex-col gap-space-xs">
-<h3 class="font-headline-sm text-primary font-bold tracking-tight">Đồ Uống Có Cồn</h3>
-<p class="font-body-sm text-on-surface-variant leading-relaxed">
-                Phân phối sỉ dòng bia cao cấp, bia thủ công (Craft Beer) đóng chai/lon và Keg tươi 20L chuyên dụng cho hệ thống nhà hàng, beer club, quán bar và đại lý cấp 1.
-              </p>
-</div>
-<div class="flex flex-col gap-2 pt-space-xs">
-<div class="flex items-center gap-space-xs text-on-surface-variant font-body-sm">
-<span class="material-symbols-outlined text-secondary text-[16px]">check_circle</span>
-<span class="">Bia thủ công &amp; Bia thương mại xuất khẩu</span>
-</div>
-<div class="flex items-center gap-space-xs text-on-surface-variant font-body-sm">
-<span class="material-symbols-outlined text-secondary text-[16px]">check_circle</span>
-<span class="">Giải pháp bảo quản lạnh nguyên kiện</span>
-</div>
-</div>
-<a class="w-full text-center py-2.5 rounded bg-surface-container hover:bg-surface-container-high text-primary font-label-md font-bold uppercase tracking-wider transition-colors mt-space-xs" href="/lien-he#yeu-cau-bao-gia">
-              Yêu cầu báo giá buôn
+
+          <!-- Dual Action Buttons -->
+          <div class="mt-7 flex flex-wrap gap-3">
+            <a
+              href="#lien-he"
+              class="h-[48px] rounded-full px-7 bg-[linear-gradient(102deg,#B68D2E_0%,#8C6B1F_100%)] text-white font-extrabold text-[13px] tracking-wide uppercase flex items-center gap-2 shadow-[0_10px_28px_rgba(182,141,46,0.4)] hover:translate-y-[-1px] hover:brightness-110 transition-all"
+            >
+              <span>Liên hệ báo giá</span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
             </a>
-</div>
-</div>
-<!-- Card 2: Non-Alcoholic Beverages -->
-<div class="group flex flex-col bg-surface-container-lowest rounded overflow-hidden transition-shadow border border-outline-variant/40 hover:border-primary-container">
-<div class="relative h-48 w-full overflow-hidden bg-primary-container">
-<img class="w-full h-full object-cover transition-transform duration-500 opacity-90" data-alt="Premium non-alcoholic beverages lineup with refreshing mineral water bottles, natural fruit juices, and carbonated beverages styled on an industrial wooden presentation counter, high clarity commercial beverage display." src="/images/stitch/f4066ad105.jpg">
-<div class="absolute inset-0 bg-primary/80"></div>
-<div class="absolute top-space-sm left-space-sm">
-<span class="px-space-xs py-0.5 rounded bg-surface text-primary font-label-sm font-bold uppercase tracking-wider border border-outline-variant/40">Mã ngành: 4633</span>
-</div>
-<div class="absolute bottom-space-sm left-space-sm right-space-sm">
-<span class="font-label-sm text-secondary-fixed uppercase tracking-wider font-semibold">Thị trường tiêu dùng nhanh</span>
-</div>
-</div>
-<div class="p-space-lg flex-1 flex flex-col justify-between gap-space-md">
-<div class="flex flex-col gap-space-xs">
-<h3 class="font-headline-sm text-primary font-bold tracking-tight">Đồ Uống Không Cồn</h3>
-<p class="font-body-sm text-on-surface-variant leading-relaxed">
-                Cung cấp nước giải khát đóng chai, nước khoáng thiên nhiên, nước ép hoa quả nguyên chất đạt chứng nhận kiểm nghiệm ATTP cho chuỗi bán lẻ và căng tin xí nghiệp.
-              </p>
-</div>
-<div class="flex flex-col gap-2 pt-space-xs">
-<div class="flex items-center gap-space-xs text-on-surface-variant font-body-sm">
-<span class="material-symbols-outlined text-secondary text-[16px]">check_circle</span>
-<span class="">Nước khoáng ion kiềm &amp; Nước suối tinh khiết</span>
-</div>
-<div class="flex items-center gap-space-xs text-on-surface-variant font-body-sm">
-<span class="material-symbols-outlined text-secondary text-[16px]">check_circle</span>
-<span class="">Nước hoa quả và trà đóng lon thanh trùng</span>
-</div>
-</div>
-<a class="w-full text-center py-2.5 rounded bg-surface-container hover:bg-surface-container-high text-primary font-label-md font-bold uppercase tracking-wider transition-colors mt-space-xs" href="/san-pham">
-              Xem danh mục sản phẩm
+            <a
+              href="#san-pham"
+              class="h-[48px] rounded-full px-7 bg-[#1c1c1c] border border-[#B68D2E]/20 text-[#f5f0d8] font-bold text-[13px] tracking-wide uppercase hover:bg-[#232323] hover:border-[#B68D2E]/40 transition flex items-center justify-center"
+            >
+              <span>Xem sản phẩm</span>
             </a>
-</div>
-</div>
-<!-- Card 3: Compliant Tobacco Distribution -->
-<div class="group flex flex-col bg-surface-container-lowest rounded overflow-hidden transition-shadow border border-outline-variant/40 hover:border-primary-container">
-<div class="relative h-48 w-full overflow-hidden bg-primary-container">
-<img class="w-full h-full object-cover transition-transform duration-500 opacity-90" data-alt="Organized industrial wholesale warehouse inventory with secured packaging boxes on pallets, legal compliance labels, formal supply chain distribution environment in Vietnam with clean architectural lighting." src="/images/stitch/b9d3569f98.jpg">
-<div class="absolute inset-0 bg-primary/80"></div>
-<div class="absolute top-space-sm left-space-sm">
-<span class="px-space-xs py-0.5 rounded bg-surface text-primary font-label-sm font-bold uppercase tracking-wider border border-outline-variant/40">Mã ngành: 4634</span>
-</div>
-<div class="absolute bottom-space-sm left-space-sm right-space-sm">
-<span class="font-label-sm text-secondary-fixed uppercase tracking-wider font-semibold">Nghiệp vụ tuân thủ đặc thù</span>
-</div>
-</div>
-<div class="p-space-lg flex-1 flex flex-col justify-between gap-space-md">
-<div class="flex flex-col gap-space-xs">
-<h3 class="font-headline-sm text-primary font-bold tracking-tight">Sản Phẩm Thuốc Lá</h3>
-<p class="font-body-sm text-on-surface-variant leading-relaxed">
-                Hoạt động bán buôn thuốc lá điếu và sản phẩm liên quan tuân thủ nghiêm ngặt theo giấy phép chuyên ngành, biểu thuế tiêu thụ đặc biệt và chứng từ nhập - xuất hợp pháp.
-              </p>
-</div>
-<div class="flex flex-col gap-2 pt-space-xs">
-<div class="flex items-center gap-space-xs text-on-surface-variant font-body-sm">
-<span class="material-symbols-outlined text-secondary text-[16px]">check_circle</span>
-<span class="">Tuân thủ quy định dán tem kiểm định nhà nước</span>
-</div>
-<div class="flex items-center gap-space-xs text-on-surface-variant font-body-sm">
-<span class="material-symbols-outlined text-secondary text-[16px]">check_circle</span>
-<span class="">Cung ứng cho đơn vị có giấy phép bán lẻ</span>
-</div>
-</div>
-<a class="w-full text-center py-2.5 rounded bg-surface-container hover:bg-surface-container-high text-primary font-label-md font-bold uppercase tracking-wider transition-colors mt-space-xs" href="/lien-he">
-              Thủ tục pháp lý giao dịch
-            </a>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- 4. PARTNERSHIP SECTION (HỢP TÁC & PHÂN PHỐI B2B) -->
-<section class="w-full py-space-xl bg-background" id="hop-tac">
-<div class="w-full px-gutter-mobile md:px-margin-tablet lg:px-margin">
-<div class="bg-primary text-on-primary rounded overflow-hidden p-space-lg md:p-space-xl relative border border-outline-variant/40">
-<!-- Subtle amber glow decorative pattern -->
-<div class="relative z-10 flex flex-col gap-space-lg">
-<div class="flex flex-col gap-space-xs max-w-3xl">
-<div class="flex items-center gap-space-sm">
-<span class="w-6 h-px bg-secondary-fixed"></span>
-<span class="font-label-sm text-secondary-fixed font-bold uppercase tracking-widest">Mô Hình Cùng Thắng (Win-Win)</span>
-</div>
-<h2 class="font-headline-xl text-surface font-bold tracking-tight">
-              Cùng Xây Dựng Cơ Hội Kinh Doanh
-            </h2>
-<p class="font-body-lg text-surface-container-high/90">
-              LTB xây dựng chính sách thương mại nhất quán, tôn trọng biên độ lợi nhuận của đối tác và cam kết hỗ trợ toàn diện từ giai đoạn ký kết đến vận hành bán lẻ.
-            </p>
-</div>
-<!-- Partner Segments Grid -->
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
-<div class="bg-primary-container p-space-md rounded flex flex-col gap-space-xs">
-<div class="w-8 h-8 rounded bg-surface/10 flex items-center justify-center text-secondary-fixed">
-<span class="material-symbols-outlined text-[18px]">storefront</span>
-</div>
-<h4 class="font-label-lg text-surface font-bold">Đại Lý Khu Vực</h4>
-<p class="font-body-sm text-surface-container-high/80">Chính sách bảo hộ địa bàn độc quyền, ưu tiên phân bổ sản lượng cao điểm dịp lễ tết.</p>
-</div>
-<div class="bg-primary-container p-space-md rounded flex flex-col gap-space-xs">
-<div class="w-8 h-8 rounded bg-surface/10 flex items-center justify-center text-secondary-fixed">
-<span class="material-symbols-outlined text-[18px]">restaurant</span>
-</div>
-<h4 class="font-label-lg text-surface font-bold">Kênh HORECA &amp; Bar</h4>
-<p class="font-body-sm text-surface-container-high/80">Hỗ trợ trọn gói hệ thống vòi chiết Keg lạnh, ly tiêu chuẩn và đào tạo rót bia chuẩn vị.</p>
-</div>
-<div class="bg-primary-container p-space-md rounded flex flex-col gap-space-xs">
-<div class="w-8 h-8 rounded bg-surface/10 flex items-center justify-center text-secondary-fixed">
-<span class="material-symbols-outlined text-[18px]">shopping_cart</span>
-</div>
-<h4 class="font-label-lg text-surface font-bold">Chuỗi Siêu Thị Mini</h4>
-<p class="font-body-sm text-surface-container-high/80">Đáp ứng đầy đủ mã vạch EAN, chứng từ EDI, chứng từ đầy đủ và quy trình đổi trả rõ ràng.</p>
-</div>
-<div class="bg-primary-container p-space-md rounded flex flex-col gap-space-xs">
-<div class="w-8 h-8 rounded bg-surface/10 flex items-center justify-center text-secondary-fixed">
-<span class="material-symbols-outlined text-[18px]">handshake</span>
-</div>
-<h4 class="font-label-lg text-surface font-bold">Tạp Hóa Truyền Thống</h4>
-<p class="font-body-sm text-surface-container-high/80">Mức nhập lô khởi đầu linh hoạt, hỗ trợ biển hiệu và vật phẩm quảng cáo POSM bắt mắt.</p>
-</div>
-</div>
-<!-- Value Commitments & Partner Form CTA -->
-<div class="pt-space-md grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-center">
-<div class="lg:col-span-8 grid grid-cols-1 sm:grid-cols-3 gap-space-md">
-<div class="flex items-center gap-space-xs">
-<span class="material-symbols-outlined text-secondary-fixed text-[20px]">percent</span>
-<span class="font-label-md text-surface">Báo giá riêng theo từng yêu cầu</span>
-</div>
-<div class="flex items-center gap-space-xs">
-<span class="material-symbols-outlined text-secondary-fixed text-[20px]">campaign</span>
-<span class="font-label-md text-surface">Tài trợ POSM &amp; Sự kiện tại điểm bán</span>
-</div>
-<div class="flex items-center gap-space-xs">
-<span class="material-symbols-outlined text-secondary-fixed text-[20px]">inventory</span>
-<span class="font-label-md text-surface">Cam kết lưu kho không đứt gãy</span>
-</div>
-</div>
-<div class="lg:col-span-4 flex justify-start lg:justify-end">
-<a class="inline-flex items-center gap-space-xs px-space-xl py-3.5 rounded bg-secondary text-surface font-label-lg font-bold uppercase tracking-wider hover:bg-secondary-fixed transition-colors border border-outline-variant/40" href="/doi-tac-phan-phoi">
-<span class="">Đăng ký đối tác ngay</span>
-<span class="material-symbols-outlined text-[18px]">trending_up</span>
-</a>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- 5. COMPANY CREDIBILITY & LEGAL ACCREDITATION CARD -->
-<section class="w-full py-space-xl bg-surface-container-low" id="thong-tin-phap-ly">
-<div class="w-full px-gutter-mobile md:px-margin-tablet lg:px-margin">
-<!-- Section Header -->
-<div class="flex flex-col gap-space-xs max-w-2xl mb-space-lg">
-<div class="flex items-center gap-space-sm">
-<span class="w-8 h-px bg-secondary"></span>
-<span class="font-label-sm text-secondary font-bold uppercase tracking-widest">Minh Bạch &amp; Pháp Lý</span>
-</div>
-<h2 class="font-headline-xl text-primary font-bold tracking-tight">
-          Thông Tin Pháp Lý Xác Thực
-        </h2>
-<p class="font-body-md text-on-surface-variant">
-          Hồ sơ doanh nghiệp niêm yết công khai theo Giấy chứng nhận đăng ký kinh doanh do Sở Kế hoạch và Đầu tư Tỉnh Đồng Nai cấp.
-        </p>
-</div>
-<!-- Business Credential Card -->
-<div class="bg-surface-container-lowest rounded p-space-lg md:p-space-xl relative overflow-hidden border border-outline-variant/40">
-<!-- Ambient Decorative Seal Background -->
-<div class="absolute top-space-md right-space-md opacity-5 pointer-events-none hidden md:block">
-<span class="material-symbols-outlined text-[200px] text-primary">verified_user</span>
-</div>
-<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl">
-<!-- Left: Official Profile -->
-<div class="lg:col-span-7 flex flex-col gap-space-md">
-<div class="flex items-center gap-space-sm pb-space-xs">
-<span class="material-symbols-outlined text-secondary text-[28px]">gavel</span>
-<div class="flex flex-col">
-<span class="font-label-sm text-on-surface-variant uppercase tracking-wider">Tư Cách Pháp Nhân Độc Lập</span>
-<span class="font-headline-sm text-primary font-bold">CÔNG TY TNHH BIA LONG THÀNH</span>
-</div>
-</div>
-<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
-<div class="p-space-sm rounded bg-surface-container-low">
-<span class="font-label-sm text-on-surface-variant uppercase tracking-wider block">Tên giao dịch quốc tế</span>
-<span class="font-label-md text-primary font-bold block mt-1">LONG THANH BEER COMPANY LIMITED</span>
-<span class="font-label-sm text-secondary font-semibold block mt-0.5">Viết tắt: LTB CO., LTD</span>
-</div>
-<div class="p-space-sm rounded bg-surface-container-low">
-<span class="font-label-sm text-on-surface-variant uppercase tracking-wider block">Mã số thuế (Tax Code)</span>
-<span class="font-headline-sm text-primary font-bold block mt-1 tracking-wider">3603823707</span>
-<span class="font-label-sm text-on-surface-variant block mt-0.5">Cấp bởi Sở KH&amp;ĐT Đồng Nai</span>
-</div>
-<div class="p-space-sm rounded bg-surface-container-low">
-<span class="font-label-sm text-on-surface-variant uppercase tracking-wider block">Người đại diện pháp luật</span>
-<span class="font-headline-sm text-primary font-bold block mt-1 uppercase">HOÀNG XUÂN DŨNG</span>
-<span class="font-label-sm text-on-surface-variant block mt-0.5">Chức danh: Giám Đốc Điều Hành</span>
-</div>
-<div class="p-space-sm rounded bg-surface-container-low">
-<span class="font-label-sm text-on-surface-variant uppercase tracking-wider block">Đường dây nóng pháp lý &amp; B2B</span>
-<span class="font-headline-sm text-secondary font-bold block mt-1">0899 447 181</span>
-<span class="font-label-sm text-on-surface-variant block mt-0.5">Hỗ trợ đối soát hợp đồng</span>
-</div>
-</div>
-<div class="p-space-sm rounded bg-surface-container-low flex flex-col gap-1">
-<span class="font-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Địa chỉ trụ sở chính</span>
-<p class="font-body-md text-primary font-medium">
-                1401/2, Tổ 17, Ấp Phước Hòa, Xã Long Phước, Huyện Long Thành, Tỉnh Đồng Nai, Việt Nam
-              </p>
-</div>
-</div>
-<!-- Right: Audit & Standards Compliance Checklist -->
-<div class="lg:col-span-5 flex flex-col justify-between bg-surface-container p-space-md rounded">
-<div class="flex flex-col gap-space-sm">
-<div class="flex items-center justify-between pb-space-xs">
-<span class="font-label-lg text-primary font-bold uppercase tracking-wider">Bộ Tiêu Chuẩn Thẩm Định</span>
-<span class="px-2 py-0.5 rounded bg-primary text-on-primary font-label-sm font-bold">Chuẩn B2B</span>
-</div>
-<div class="flex flex-col gap-space-xs font-body-sm text-on-surface-variant">
-<div class="flex items-start gap-space-xs">
-<span class="material-symbols-outlined text-secondary text-[18px] shrink-0 mt-0.5">check</span>
-<span class="">Hồ sơ tự công bố sản phẩm theo Nghị định 15/2018/NĐ-CP</span>
-</div>
-<div class="flex items-start gap-space-xs">
-<span class="material-symbols-outlined text-secondary text-[18px] shrink-0 mt-0.5">check</span>
-<span class="">Chứng nhận cơ sở đủ điều kiện An toàn thực phẩm</span>
-</div>
-<div class="flex items-start gap-space-xs">
-<span class="material-symbols-outlined text-secondary text-[18px] shrink-0 mt-0.5">check</span>
-<span class="">Giấy phép bán buôn rượu/bia có nồng độ cồn theo quy chuẩn</span>
-</div>
-<div class="flex items-start gap-space-xs">
-<span class="material-symbols-outlined text-secondary text-[18px] shrink-0 mt-0.5">check</span>
-<span class="">Hoá đơn điện tử hợp lệ (e-Invoice) xuất trả cùng chuyến xe</span>
-</div>
-</div>
-</div>
-<!-- Verification Action -->
-<div class="pt-space-md mt-space-sm flex flex-col gap-2">
-<div class="flex items-center gap-space-xs text-secondary font-label-sm font-semibold">
-<span class="material-symbols-outlined text-[16px]">verified</span>
-<span class="">Thông tin đã được xác thực trên Cổng thông tin Doanh nghiệp Quốc gia</span>
-</div>
-<a class="text-center py-2.5 rounded bg-primary text-on-primary font-label-md font-bold uppercase tracking-wider hover:bg-primary-container transition-colors" href="/lien-he">
-                Yêu cầu sao y bản sao pháp lý
-              </a>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- 6. NEWS & INDUSTRY UPDATES (TIN TỨC & THỊ TRƯỜNG) -->
-<section class="w-full py-space-xl bg-background">
-<div class="w-full px-gutter-mobile md:px-margin-tablet lg:px-margin">
-<!-- Section Header -->
-<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md mb-space-lg">
-<div class="flex flex-col gap-space-xs max-w-2xl">
-<div class="flex items-center gap-space-sm">
-<span class="w-8 h-px bg-secondary"></span>
-<span class="font-label-sm text-secondary font-bold uppercase tracking-widest">Ấn Phẩm &amp; Cập Nhật</span>
-</div>
-<h2 class="font-headline-xl text-primary font-bold tracking-tight">
-            Tin Tức &amp; Thị Trường Ngành Đồ Uống
-          </h2>
-<p class="font-body-md text-on-surface-variant">
-            Góc nhìn chuyên sâu về xu hướng tiêu dùng, phân tích quy định thương mại và thông báo chính sách mới từ Long Thanh Beer.
-          </p>
-</div>
-<a class="inline-flex items-center gap-space-xs font-label-lg text-primary hover:text-secondary font-bold uppercase tracking-wider transition-colors" href="/tin-tuc">
-<span class="">Xem tất cả tin tức</span>
-<span class="material-symbols-outlined text-[18px]">trending_flat</span>
-</a>
-</div>
-<!-- 3 Editorial Articles Grid -->
-<div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg">
-<!-- Article 1 -->
-<article class="flex flex-col bg-surface-container-lowest rounded overflow-hidden transition-shadow border border-outline-variant/40 hover:border-primary-container">
-<div class="h-48 w-full overflow-hidden bg-surface-container">
-<img class="w-full h-full object-cover transition-transform duration-500" data-alt="Modern craft brewery fermentation tanks and tasting glasses in a professional laboratory review setting, industry analysis photography in Vietnam." src="/images/stitch/a71a5bd487.jpg">
-</div>
-<div class="p-space-md flex-1 flex flex-col justify-between gap-space-sm">
-<div class="flex flex-col gap-space-xs">
-<div class="flex items-center gap-space-sm font-label-sm text-on-surface-variant">
-<span class="px-space-xs py-0.5 rounded bg-surface-container-high text-primary font-bold">Thị Trường</span>
-<span class="">• 5 phút đọc</span>
-<span class="">• 12/03/2025</span>
-</div>
-<h3 class="font-headline-sm text-primary font-bold tracking-tight hover:text-secondary transition-colors">
-                Xu hướng tiêu dùng đồ uống cao cấp &amp; thị trường bia B2B tại vùng kinh tế Đông Nam Bộ
-              </h3>
-<p class="font-body-sm text-on-surface-variant line-clamp-3">
-                Phân tích dữ liệu dịch chuyển thị phần từ các dòng bia phổ thông sang dòng bia thủ công (Craft Beer) và đồ uống lên men tự nhiên tại các chuỗi nhà hàng dịch vụ cao cấp.
-              </p>
-</div>
-<div class="pt-space-xs flex items-center gap-space-xs text-primary font-label-md font-bold group-hover:text-secondary">
-<span class="">Đọc tiếp bản tin</span>
-<span class="material-symbols-outlined text-[16px]">arrow_right_alt</span>
-</div>
-</div>
-</article>
-<!-- Article 2 -->
-<article class="flex flex-col bg-surface-container-lowest rounded overflow-hidden transition-shadow border border-outline-variant/40 hover:border-primary-container">
-<div class="h-48 w-full overflow-hidden bg-surface-container">
-<img class="w-full h-full object-cover transition-transform duration-500" data-alt="Bar manager and beverage supplier discussing quality checklist in an upscale restaurant bar setup with ambient lighting and stainless beer taps." src="/images/stitch/f0680f20e6.jpg">
-</div>
-<div class="p-space-md flex-1 flex flex-col justify-between gap-space-sm">
-<div class="flex flex-col gap-space-xs">
-<div class="flex items-center gap-space-sm font-label-sm text-on-surface-variant">
-<span class="px-space-xs py-0.5 rounded bg-surface-container-high text-primary font-bold">Cẩm Nang B2B</span>
-<span class="">• 4 phút đọc</span>
-<span class="">• 28/02/2025</span>
-</div>
-<h3 class="font-headline-sm text-primary font-bold tracking-tight hover:text-secondary transition-colors">
-                Tiêu chí lựa chọn đối tác phân phối đồ uống chuẩn mực cho nhà hàng &amp; quán bar
-              </h3>
-<p class="font-body-sm text-on-surface-variant line-clamp-3">
-                5 chỉ số vàng quyết định thành công của chuỗi cung ứng: tốc độ bổ sung hàng nóng, kiểm soát hạn sử dụng, dịch vụ kỹ thuật bảo trì vòi bia và tính minh bạch chứng từ pháp lý.
-              </p>
-</div>
-<div class="pt-space-xs flex items-center gap-space-xs text-primary font-label-md font-bold group-hover:text-secondary">
-<span class="">Đọc tiếp bản tin</span>
-<span class="material-symbols-outlined text-[16px]">arrow_right_alt</span>
-</div>
-</div>
-</article>
-<!-- Article 3 -->
-<article class="flex flex-col bg-surface-container-lowest rounded overflow-hidden transition-shadow border border-outline-variant/40 hover:border-primary-container">
-<div class="h-48 w-full overflow-hidden bg-surface-container">
-<img class="w-full h-full object-cover transition-transform duration-500" data-alt="Logistics warehouse team packing wholesale boxes with delivery schedule clipboards in a clean corporate distribution facility." src="/images/stitch/351d72a9fd.jpg">
-</div>
-<div class="p-space-md flex-1 flex flex-col justify-between gap-space-sm">
-<div class="flex flex-col gap-space-xs">
-<div class="flex items-center gap-space-sm font-label-sm text-on-surface-variant">
-<span class="px-space-xs py-0.5 rounded bg-secondary-container/30 text-secondary font-bold">Thông Báo LTB</span>
-<span class="">• 3 phút đọc</span>
-<span class="">• 15/02/2025</span>
-</div>
-<h3 class="font-headline-sm text-primary font-bold tracking-tight hover:text-secondary transition-colors">
-                LTB cập nhật chính sách hỗ trợ phát triển mạng lưới đại lý quý mới 2025
-              </h3>
-<p class="font-body-sm text-on-surface-variant line-clamp-3">
-                Bổ sung gói hỗ trợ nhận diện thương hiệu tại điểm bán và quy trình tiếp nhận yêu cầu đặt hàng dành cho đối tác ký hợp đồng đại lý năm.
-              </p>
-</div>
-<div class="pt-space-xs flex items-center gap-space-xs text-primary font-label-md font-bold group-hover:text-secondary">
-<span class="">Đọc tiếp bản tin</span>
-<span class="material-symbols-outlined text-[16px]">arrow_right_alt</span>
-</div>
-</div>
-</article>
-</div>
-</div>
-</section>
-<!-- 7. CONTACT CTA BANNER (ĐIỀU PHỐI THƯƠNG MẠI) -->
-<section class="w-full py-space-xl bg-surface-container-low">
-<div class="w-full px-gutter-mobile md:px-margin-tablet lg:px-margin">
-<div class="bg-tertiary text-on-tertiary rounded p-space-lg md:p-space-xl relative overflow-hidden border border-outline-variant/40">
-<div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-center">
-<div class="lg:col-span-8 flex flex-col gap-space-xs">
-<div class="inline-flex items-center gap-space-xs px-space-xs py-0.5 rounded bg-surface/10 w-fit text-secondary-fixed font-label-sm font-bold uppercase tracking-wider">
-<span class="material-symbols-outlined text-[14px]">call</span>
-              Phòng Thương Mại Doanh Nghiệp
+          </div>
+
+          <!-- 3 KPI Feature Blocks -->
+          <div class="mt-10 grid grid-cols-3 gap-3 max-w-[520px]">
+            <div class="rounded-[16px] bg-[#151515] border border-[#B68D2E]/15 p-4 hover:border-[#B68D2E]/30 transition-colors">
+              <div class="text-[22px] font-black text-[#D4AA4A] tracking-tight">500+</div>
+              <div class="text-[12px] font-bold uppercase tracking-wide mt-1 text-white">Đại lý &amp; quán</div>
+              <div class="text-[11px] text-[#8a8676] mt-1">Tin cậy tại ĐN</div>
             </div>
-<h2 class="font-headline-xl text-surface font-bold tracking-tight">
-              Bắt Đầu Kết Nối Cùng LTB
+            <div class="rounded-[16px] bg-[#151515] border border-[#B68D2E]/15 p-4 hover:border-[#B68D2E]/30 transition-colors">
+              <div class="text-[22px] font-black text-[#D4AA4A] tracking-tight">24/7</div>
+              <div class="text-[12px] font-bold uppercase tracking-wide mt-1 text-white">Giao hàng</div>
+              <div class="text-[11px] text-[#8a8676] mt-1">Kể cả CN, Lễ</div>
+            </div>
+            <div class="rounded-[16px] bg-[#151515] border border-[#B68D2E]/15 p-4 hover:border-[#B68D2E]/30 transition-colors">
+              <div class="text-[22px] font-black text-[#D4AA4A] tracking-tight">VAT</div>
+              <div class="text-[12px] font-bold uppercase tracking-wide mt-1 text-white">Hóa đơn đầy đủ</div>
+              <div class="text-[11px] text-[#8a8676] mt-1">MST 3603823707</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Showcase Image & Floating Credential Cards -->
+        <div class="relative min-w-0">
+          <div class="absolute -inset-4 rounded-[32px] bg-[radial-gradient(circle_at_30%_30%,rgba(212,170,74,0.22),rgba(182,141,46,0.18)_30%,transparent_68%)] blur-[12px] pointer-events-none"></div>
+          
+          <div class="relative rounded-[28px] overflow-hidden border border-[#B68D2E]/20 bg-[#111] shadow-[0_24px_80px_rgba(0,0,0,0.5)] max-w-full">
+            <img
+              src="/brand/ref-il.webp"
+              alt="Bia Việt Premium Splash - Nhà phân phối LTB"
+              class="w-full h-[520px] lg:h-[640px] object-cover max-w-full hover:scale-105 transition-transform duration-700"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent"></div>
+
+            <!-- Top Floating Header inside photo -->
+            <div class="absolute top-4 left-4 right-4 flex justify-between items-start">
+              <div class="rounded-full bg-black/60 backdrop-blur border border-[#B68D2E]/30 px-3 py-1.5 text-[10px] uppercase tracking-[0.18em] font-bold flex items-center gap-2 text-[#D4AA4A]">
+                <img
+                  src="/brand/ref-fA.png"
+                  alt=""
+                  aria-hidden="true"
+                  class="h-5 w-auto object-contain logo-gold-shadow"
+                />
+                <span>LONG THANH BEER • MST 3603823707</span>
+              </div>
+              <div class="h-9 w-9 rounded-full bg-black/50 backdrop-blur border border-[#B68D2E]/20 grid place-items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#B68D2E]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M2 22 16 8"></path>
+                  <path d="M3.47 12.53 5 11l1.53 1.53a3.5 3.5 0 0 1 0 4.94L5 19l-1.53-1.53a3.5 3.5 0 0 1 0-4.94Z"></path>
+                </svg>
+              </div>
+            </div>
+
+            <!-- Bottom Floating Bar inside photo -->
+            <div class="absolute bottom-0 inset-x-0 p-5 flex items-center justify-between gap-4 max-w-full">
+              <div class="rounded-full bg-black/60 backdrop-blur border border-white/10 px-4 py-2 text-[11px] uppercase tracking-wide font-bold flex items-center gap-2 text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-[#B68D2E]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"></path>
+                </svg>
+                <span>Kho Phước Hòa • Giao nhanh Long Thành</span>
+              </div>
+              <div class="h-10 w-10 rounded-full bg-[#0a0a0a] border border-[#B68D2E]/20 grid place-items-center overflow-hidden">
+                <img
+                  src="/brand/ref-fA.png"
+                  alt=""
+                  aria-hidden="true"
+                  class="h-7 w-auto object-contain"
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- Bottom External Floating Card (White Popover) -->
+          <div class="absolute -bottom-6 left-2 lg:left-4 rounded-[18px] bg-white text-black border border-[#e8dfbe] shadow-[0_18px_40px_rgba(0,0,0,0.3)] p-4 w-[min(320px,90%)] max-w-full">
+            <div class="flex items-start gap-3">
+              <div class="h-10 w-10 rounded-full bg-[#0e0e0e] border border-[#B68D2E]/30 grid place-items-center overflow-hidden p-1 shrink-0">
+                <img
+                  src="/brand/ref-fA.png"
+                  alt=""
+                  aria-hidden="true"
+                  class="h-8 w-auto object-contain"
+                />
+              </div>
+              <div class="leading-tight min-w-0">
+                <div class="text-[11px] uppercase tracking-[0.16em] font-bold text-[#B68D2E]">
+                  Pháp lý rõ ràng • Logo vàng #B68D2E
+                </div>
+                <div class="text-[13px] font-bold mt-1 text-[#1a1a1a]">
+                  CÔNG TY TNHH BIA LONG THÀNH
+                </div>
+                <div class="text-[11px] text-[#6b6b6b] mt-1">
+                  MST 3603823707 • Ngày cấp 19/08/2021 • Bán buôn 4633
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: CREDENTIAL RIBBON BANNER -->
+    <section class="bg-[#fdfbf3] border-y border-[#ece6d3]">
+      <div class="mx-auto max-w-[1240px] px-4 sm:px-6 lg:px-8 py-8 lg:py-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <!-- Item 1: MST -->
+        <div class="group rounded-[20px] bg-white border border-[#ece6d3] p-5 hover:-translate-y-1 hover:shadow-[0_16px_36px_rgba(182,141,46,0.12)] hover:border-[#B68D2E]/30 transition-all">
+          <div class="flex items-center gap-3">
+            <div class="h-10 w-10 rounded-full bg-[#0e0e0e] text-[#B68D2E] grid place-items-center border border-[#B68D2E]/20 shrink-0">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path>
+                <path d="M14 2v4a2 2 0 0 0 2 2h4"></path>
+                <path d="M10 9H8"></path>
+                <path d="M16 13H8"></path>
+                <path d="M16 17H8"></path>
+              </svg>
+            </div>
+            <div class="text-[11px] uppercase tracking-[0.16em] font-bold text-[#8C6B1F]/70">
+              Mã số thuế
+            </div>
+          </div>
+          <div class="mt-4 text-[15px] font-extrabold tracking-tight leading-[1.25] text-[#1a1a1a]">
+            3603823707
+          </div>
+          <div class="text-[12px] text-[#6b6b6b] mt-1">
+            Ngày cấp: 19/08/2021
+          </div>
+        </div>
+
+        <!-- Item 2: Địa chỉ mới -->
+        <div class="group rounded-[20px] bg-white border border-[#ece6d3] p-5 hover:-translate-y-1 hover:shadow-[0_16px_36px_rgba(182,141,46,0.12)] hover:border-[#B68D2E]/30 transition-all">
+          <div class="flex items-center gap-3">
+            <div class="h-10 w-10 rounded-full bg-[#0e0e0e] text-[#B68D2E] grid place-items-center border border-[#B68D2E]/20 shrink-0">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+            </div>
+            <div class="text-[11px] uppercase tracking-[0.16em] font-bold text-[#8C6B1F]/70">
+              Địa chỉ sau sáp nhập
+            </div>
+          </div>
+          <div class="mt-4 text-[15px] font-extrabold tracking-tight leading-[1.25] text-[#1a1a1a]">
+            1401/2, tổ 17, ấp Phước Hòa
+          </div>
+          <div class="text-[12px] text-[#6b6b6b] mt-1">
+            Xã Long Phước, Đồng Nai
+          </div>
+        </div>
+
+        <!-- Item 3: Đại diện pháp luật -->
+        <div class="group rounded-[20px] bg-white border border-[#ece6d3] p-5 hover:-translate-y-1 hover:shadow-[0_16px_36px_rgba(182,141,46,0.12)] hover:border-[#B68D2E]/30 transition-all">
+          <div class="flex items-center gap-3">
+            <div class="h-10 w-10 rounded-full bg-[#0e0e0e] text-[#B68D2E] grid place-items-center border border-[#B68D2E]/20 shrink-0">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"></path>
+                <path d="m9 12 2 2 4-4"></path>
+              </svg>
+            </div>
+            <div class="text-[11px] uppercase tracking-[0.16em] font-bold text-[#8C6B1F]/70">
+              Người đại diện
+            </div>
+          </div>
+          <div class="mt-4 text-[15px] font-extrabold tracking-tight leading-[1.25] text-[#1a1a1a]">
+            HOÀNG XUÂN DŨNG
+          </div>
+          <div class="text-[12px] text-[#6b6b6b] mt-1">
+            Đại diện pháp luật
+          </div>
+        </div>
+
+        <!-- Item 4: Tên quốc tế -->
+        <div class="group rounded-[20px] bg-white border border-[#ece6d3] p-5 hover:-translate-y-1 hover:shadow-[0_16px_36px_rgba(182,141,46,0.12)] hover:border-[#B68D2E]/30 transition-all">
+          <div class="flex items-center gap-3">
+            <div class="h-10 w-10 rounded-full bg-[#0e0e0e] text-[#B68D2E] grid place-items-center border border-[#B68D2E]/20 shrink-0">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2 20a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8l-7 5V8l-7 5V4a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"></path>
+                <path d="M17 18h1"></path>
+                <path d="M12 18h1"></path>
+                <path d="M7 18h1"></path>
+              </svg>
+            </div>
+            <div class="text-[11px] uppercase tracking-[0.16em] font-bold text-[#8C6B1F]/70">
+              Tên quốc tế
+            </div>
+          </div>
+          <div class="mt-4 text-[15px] font-extrabold tracking-tight leading-[1.25] text-[#1a1a1a]">
+            LONG THANH BEER
+          </div>
+          <div class="text-[12px] text-[#6b6b6b] mt-1">
+            COMPANY LIMITED • LTB
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: GIỚI THIỆU DOANH NGHIỆP (#gioi-thieu) -->
+    <section id="gioi-thieu" class="mx-auto max-w-[1240px] px-4 sm:px-6 lg:px-8 py-14 lg:py-24 grid lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] gap-10 lg:gap-16 items-start bg-white">
+      <!-- Left: Real Warehouse Photo & Floating Core Badges -->
+      <div class="relative min-w-0">
+        <div class="rounded-[28px] overflow-hidden border border-[#ece6d3] bg-white shadow-[0_8px_32px_rgba(182,141,46,0.08)]">
+          <img
+            src="/brand/ref-ol.webp"
+            alt="Kho phân phối bia Long Thành tại Phước Hòa"
+            class="w-full h-[420px] lg:h-[560px] object-cover max-w-full"
+          />
+        </div>
+
+        <div class="absolute -bottom-6 right-2 lg:right-4 rounded-[20px] bg-[#0e0e0e] text-white p-5 border border-[#B68D2E]/20 w-[min(280px,92%)] shadow-[0_20px_50px_rgba(0,0,0,0.4)] max-w-full">
+          <div class="flex items-center gap-2 text-[11px] uppercase tracking-[0.16em] font-bold text-[#D4AA4A]">
+            <img
+              src="/brand/ref-fA.png"
+              alt=""
+              aria-hidden="true"
+              class="h-4 w-auto"
+            />
+            <span>Năng lực cốt lõi</span>
+          </div>
+          <div class="mt-3 space-y-3">
+            <div class="flex items-center gap-2 text-[13px] font-medium">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-[#B68D2E]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Kho &gt;1000m² tại Phước Hòa</span>
+            </div>
+            <div class="flex items-center gap-2 text-[13px] font-medium">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-[#B68D2E]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Giao hàng 24/7 toàn Đồng Nai</span>
+            </div>
+            <div class="flex items-center gap-2 text-[13px] font-medium">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-[#B68D2E]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Đầy đủ giấy phép 4633</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Narrative, Advantages & Historical Milestones -->
+      <div class="min-w-0">
+        <div class="inline-flex items-center gap-2 rounded-full bg-[#fdf6de] border border-[#e8d9a8] px-3 py-1 text-[11px] font-bold uppercase tracking-[0.14em] text-[#8C6B1F]">
+          <img
+            src="/brand/ref-fA.png"
+            alt=""
+            aria-hidden="true"
+            class="h-4 w-auto object-contain"
+          />
+          <span>Về chúng tôi • LTB GOLD</span>
+        </div>
+
+        <h2 class="mt-4 text-[30px] lg:text-[40px] font-black leading-[0.95] tracking-[-0.03em] uppercase text-[#1a1a1a]">
+          Nhà phân phối <br />đáng tin cậy <br />
+          <span class="gold-text-gradient">từ 2021</span>
+        </h2>
+
+        <p class="mt-5 text-[15px] leading-[1.75] text-[#3a3a3a]">
+          CÔNG TY TNHH BIA LONG THÀNH (LTB) hoạt động theo MST <b class="text-[#8C6B1F]">3603823707</b> từ ngày 19/08/2021, chuyên bán buôn đồ uống có cồn, không cồn và sản phẩm thuốc lá theo mã ngành <b>4633, 46331, 46332, 46340</b>. Chúng tôi tập trung vào uy tín pháp lý, nguồn hàng chính hãng và dịch vụ giao hàng nhanh.
+        </p>
+
+        <!-- 4 Key Advantages Grid -->
+        <div class="mt-6 grid sm:grid-cols-2 gap-3 min-w-0">
+          <div class="rounded-[16px] border border-[#ece6d3] bg-white p-4 min-w-0 hover:border-[#B68D2E]/30 transition-colors">
+            <div class="font-bold text-[13px] uppercase tracking-wide text-[#1a1a1a]">Nguồn hàng chính hãng</div>
+            <div class="mt-1 text-[12.5px] leading-[1.6] text-[#6b6b6b]">Heineken, Tiger, Saigon, 333, Budweiser... nhập trực tiếp, hóa đơn đầy đủ.</div>
+          </div>
+          <div class="rounded-[16px] border border-[#ece6d3] bg-white p-4 min-w-0 hover:border-[#B68D2E]/30 transition-colors">
+            <div class="font-bold text-[13px] uppercase tracking-wide text-[#1a1a1a]">Giá sỉ cạnh tranh</div>
+            <div class="mt-1 text-[12.5px] leading-[1.6] text-[#6b6b6b]">Chiết khấu tốt cho đại lý, quán nhậu, tạp hóa, F&amp;B khu vực Long Thành.</div>
+          </div>
+          <div class="rounded-[16px] border border-[#ece6d3] bg-white p-4 min-w-0 hover:border-[#B68D2E]/30 transition-colors">
+            <div class="font-bold text-[13px] uppercase tracking-wide text-[#1a1a1a]">Giấy phép đầy đủ</div>
+            <div class="mt-1 text-[12.5px] leading-[1.6] text-[#6b6b6b]">Đủ điều kiện kinh doanh bán buôn đồ uống &amp; thuốc lá theo quy định.</div>
+          </div>
+          <div class="rounded-[16px] border border-[#ece6d3] bg-white p-4 min-w-0 hover:border-[#B68D2E]/30 transition-colors">
+            <div class="font-bold text-[13px] uppercase tracking-wide text-[#1a1a1a]">Hỗ trợ xuất VAT</div>
+            <div class="mt-1 text-[12.5px] leading-[1.6] text-[#6b6b6b]">Xuất hóa đơn VAT theo MST 3603823707 - LONG THANH BEER CO., LTD.</div>
+          </div>
+        </div>
+
+        <!-- 3 Milestone Timeline -->
+        <div class="mt-8 border-l-2 border-[#B68D2E]/30 pl-6 space-y-6">
+          <div class="relative">
+            <div class="absolute -left-[31px] top-1 h-3 w-3 rounded-full bg-[#B68D2E] border-2 border-white shadow-[0_0_0_3px_rgba(182,141,46,0.15)]"></div>
+            <div class="text-[12px] font-black tracking-[0.16em] text-[#B68D2E]">2021</div>
+            <div class="font-bold mt-1 text-[#1a1a1a]">Thành lập</div>
+            <div class="text-[13px] text-[#6b6b6b] leading-[1.6] mt-1">CÔNG TY TNHH BIA LONG THÀNH được cấp MST 3603823707, đại diện HOÀNG XUÂN DŨNG.</div>
+          </div>
+          <div class="relative">
+            <div class="absolute -left-[31px] top-1 h-3 w-3 rounded-full bg-[#B68D2E] border-2 border-white shadow-[0_0_0_3px_rgba(182,141,46,0.15)]"></div>
+            <div class="text-[12px] font-black tracking-[0.16em] text-[#B68D2E]">2022</div>
+            <div class="font-bold mt-1 text-[#1a1a1a]">Mở rộng kho Phước Hòa</div>
+            <div class="text-[13px] text-[#6b6b6b] leading-[1.6] mt-1">Đầu tư kho &gt;1000m², đội xe tải giao hàng nội huyện và liên tỉnh.</div>
+          </div>
+          <div class="relative">
+            <div class="absolute -left-[31px] top-1 h-3 w-3 rounded-full bg-[#B68D2E] border-2 border-white shadow-[0_0_0_3px_rgba(182,141,46,0.15)]"></div>
+            <div class="text-[12px] font-black tracking-[0.16em] text-[#B68D2E]">2024</div>
+            <div class="font-bold mt-1 text-[#1a1a1a]">Cập nhật địa chỉ mới</div>
+            <div class="text-[13px] text-[#6b6b6b] leading-[1.6] mt-1">1401/2, tổ 17, ấp Phước Hòa, Xã Long Phước, Tỉnh Đồng Nai sau sáp nhập 2025.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: SẢN PHẨM & DỊCH VỤ (#san-pham) -->
+    <section id="san-pham" class="relative border-y border-[#1e1c14] bg-[#0E0E0E] text-white overflow-hidden">
+      <!-- Background texture dl -->
+      <div class="absolute inset-0 opacity-[0.08]">
+        <img
+          src="/brand/ref-dl.webp"
+          alt=""
+          class="h-full w-full object-cover"
+        />
+      </div>
+      <div class="absolute inset-0 bg-gradient-to-b from-[#0E0E0E] via-[#0E0E0E]/92 to-[#0E0E0E]"></div>
+      <div
+        class="absolute inset-0 opacity-[0.03]"
+        style="background-image: url('data:image/svg+xml,%3Csvg viewBox=\'0 0 256 256\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cfilter id=\'n\'%3E%3CfeTurbulence type=\'fractalNoise\' baseFrequency=\'0.9\'/%3E%3C/filter%3E%3Crect width=\'100%25\' height=\'100%25\' filter=\'url(%23n)\'/%3E%3C/svg%3E');"
+      ></div>
+
+      <div class="relative mx-auto max-w-[1240px] px-4 sm:px-6 lg:px-8 py-14 lg:py-20">
+        <!-- Section Title & Description -->
+        <div class="flex flex-wrap items-end justify-between gap-6">
+          <div>
+            <div class="inline-flex items-center gap-2 rounded-full border border-[#B68D2E]/30 bg-[#1a1912] px-3 py-1 text-[11px] font-bold uppercase tracking-[0.16em] text-[#D4AA4A]">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-[#B68D2E]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2 22 16 8"></path>
+                <path d="M3.47 12.53 5 11l1.53 1.53a3.5 3.5 0 0 1 0 4.94L5 19l-1.53-1.53a3.5 3.5 0 0 1 0-4.94Z"></path>
+              </svg>
+              <span>Sản phẩm &amp; Dịch vụ • LTB GOLD #B68D2E</span>
+            </div>
+            <h2 class="mt-4 text-[28px] lg:text-[40px] font-black leading-[0.95] uppercase tracking-[-0.02em]">
+              Bán buôn đa ngành <br />
+              <span class="text-[#D4AA4A]">đồ uống &amp; thuốc lá</span>
             </h2>
-<p class="font-body-lg text-surface-container-high/90 max-w-2xl">
-              Đội ngũ phụ trách khu vực của Công ty TNHH Bia Long Thành sẵn sàng cử chuyên viên tiếp nhận nhu cầu, khảo sát thực tế và tiếp nhận yêu cầu báo giá và phản hồi trong vòng 2 giờ làm việc.
-            </p>
-</div>
-<div class="lg:col-span-4 flex flex-col sm:flex-row lg:flex-col gap-space-sm justify-center lg:items-end">
-<a class="w-full sm:w-auto inline-flex items-center justify-center gap-space-sm px-space-xl py-3.5 rounded bg-secondary text-surface font-label-lg font-bold uppercase tracking-wider hover:bg-secondary-fixed transition-colors border border-outline-variant/40" href="tel:0899447181">
-<span class="material-symbols-outlined text-[20px]">phone_in_talk</span>
-<span class="">0899 447 181</span>
-</a>
-<button class="w-full sm:w-auto inline-flex items-center justify-center gap-space-xs px-space-lg py-3 rounded bg-surface/10 text-surface hover:bg-surface/20 font-label-lg font-semibold uppercase tracking-wider transition-colors" onclick="document.getElementById('b2b-contact-modal').classList.remove('hidden')" type="button">
-<span class="material-symbols-outlined text-[18px]">mail</span>
-<span class="">Gửi phiếu đăng ký phân phối</span>
-</button>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Interactive Modal: B2B Fast Ingestion Dialog -->
-<div class="hidden fixed inset-0 z-50 flex items-center justify-center bg-tertiary/70 p-4" id="b2b-contact-modal">
-<div class="bg-surface-container-lowest rounded max-w-lg w-full p-space-lg relative max-h-[90vh] overflow-y-auto border border-outline-variant/40">
-<div class="flex items-center justify-between pb-space-xs mb-space-sm">
-<div class="flex flex-col">
-<span class="font-label-sm text-secondary uppercase font-bold tracking-widest">Gửi yêu cầu báo giá B2B</span>
-<h3 class="font-headline-sm text-primary font-bold">Kết Nối Đại Lý Cùng LTB</h3>
-</div>
-<button class="w-8 h-8 rounded-full bg-surface-container hover:bg-surface-container-high flex items-center justify-center text-on-surface" onclick="document.getElementById('b2b-contact-modal').classList.add('hidden')" type="button">
-<span class="material-symbols-outlined text-[18px]">close</span>
-</button>
-</div>
-<LeadForm id="home-lead" compact submitLabel="Gửi yêu cầu báo giá" topics={[
-{ value: 'horeca', label: 'Nhà hàng / Beer Club / Quán Bar (Kênh HORECA)' },
-{ value: 'dai-ly', label: 'Đại lý bia sỉ & lẻ khu vực Đồng Nai' },
-{ value: 'sieu-thi-mini', label: 'Chuỗi siêu thị mini / Bách hóa' },
-{ value: 'khac', label: 'Sản phẩm thuốc lá & Đồ uống tổng hợp' },
-]} />
-</div>
-</div>
-</div></main></PublicLayout>
+          </div>
+          <p class="max-w-[420px] text-[14px] leading-[1.7] text-[#b9b49f]">
+            Mã ngành 4633, 46331, 46332, 46340 - đủ danh mục cho đại lý, tạp hóa, nhà hàng, quán nhậu tại Long Thành, Nhơn Trạch, Biên Hòa. Tông vàng <span class="text-[#B68D2E] font-bold">#B68D2E</span> đồng bộ logo.
+          </p>
+        </div>
+
+        <!-- 4 Category Cards Grid -->
+        <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <!-- Card 1: 46331 Bia -->
+          <div class="group rounded-[22px] bg-[#17150e] border border-[#B68D2E]/15 p-5 hover:-translate-y-1 hover:border-[#B68D2E]/35 hover:shadow-[0_20px_50px_rgba(182,141,46,0.12)] transition-all flex flex-col justify-between">
+            <div>
+              <div class="flex items-start justify-between">
+                <div class="h-12 w-12 rounded-[14px] bg-[#1f1d13] border border-[#B68D2E]/20 grid place-items-center text-[#B68D2E]">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M17 11h1a3 3 0 0 1 0 6h-1"></path>
+                    <path d="M9 12v6"></path>
+                    <path d="M13 12v6"></path>
+                    <path d="M14 7.5c-1 0-1.44.5-3 .5s-2-.5-3-.5-1.72.5-2.5.5a2.5 2.5 0 0 1 0-5c.78 0 1.57.5 2.5.5S9.44 3 11 3s2 .5 3 .5 1.72-.5 2.5-.5a2.5 2.5 0 0 1 0 5c-.78 0-1.5-.5-2.5-.5Z"></path>
+                    <path d="M5 7.5V18a3 3 0 0 0 3 3h6a3 3 0 0 0 3-3V7.5"></path>
+                  </svg>
+                </div>
+                <span class="rounded-full bg-[#B68D2E] text-white text-[10px] font-black tracking-[0.14em] px-2.5 py-1">46331</span>
+              </div>
+              <div class="mt-5 font-extrabold text-[15px] leading-[1.2] uppercase tracking-wide text-white">
+                Bia &amp; Đồ uống có cồn
+              </div>
+              <div class="mt-2 text-[13px] leading-[1.6] text-[#a8a391]">
+                Heineken, Tiger, Saigon, 333, Budweiser, Larue... thùng, lon, chai đủ loại.
+              </div>
+              <div class="mt-4 space-y-2">
+                <div class="flex items-center gap-2 text-[12px] text-[#d8d2b9]">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5 text-[#B68D2E]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Giá sỉ theo thùng</span>
+                </div>
+                <div class="flex items-center gap-2 text-[12px] text-[#d8d2b9]">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5 text-[#B68D2E]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Giao nhanh 24/7</span>
+                </div>
+                <div class="flex items-center gap-2 text-[12px] text-[#d8d2b9]">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5 text-[#B68D2E]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Hàng chính hãng</span>
+                </div>
+              </div>
+            </div>
+            <a
+              href="#lien-he"
+              class="mt-5 w-full h-10 rounded-full bg-[#232115] border border-[#B68D2E]/20 text-[#D4AA4A] text-[12px] font-bold uppercase tracking-wide group-hover:bg-[#2a2618] group-hover:border-[#B68D2E]/40 transition flex items-center justify-center"
+            >
+              Báo giá nhóm này
+            </a>
+          </div>
+
+          <!-- Card 2: 46332 Nước ngọt -->
+          <div class="group rounded-[22px] bg-[#17150e] border border-[#B68D2E]/15 p-5 hover:-translate-y-1 hover:border-[#B68D2E]/35 hover:shadow-[0_20px_50px_rgba(182,141,46,0.12)] transition-all flex flex-col justify-between">
+            <div>
+              <div class="flex items-start justify-between">
+                <div class="h-12 w-12 rounded-[14px] bg-[#1f1d13] border border-[#B68D2E]/20 grid place-items-center text-[#B68D2E]">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M16.5 9.4 7.55 4.24a1.78 1.78 0 0 0-2.5 1.55v12.42a1.78 1.78 0 0 0 2.5 1.55L16.5 14.6a1.78 1.78 0 0 0 0-3.2z"></path>
+                    <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                  </svg>
+                </div>
+                <span class="rounded-full bg-[#B68D2E] text-white text-[10px] font-black tracking-[0.14em] px-2.5 py-1">46332</span>
+              </div>
+              <div class="mt-5 font-extrabold text-[15px] leading-[1.2] uppercase tracking-wide text-white">
+                Đồ uống không cồn
+              </div>
+              <div class="mt-2 text-[13px] leading-[1.6] text-[#a8a391]">
+                Nước ngọt, tăng lực, nước suối, trà, sữa - phục vụ tạp hóa, quán.
+              </div>
+              <div class="mt-4 space-y-2">
+                <div class="flex items-center gap-2 text-[12px] text-[#d8d2b9]">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5 text-[#B68D2E]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Coca, Pepsi, Redbull</span>
+                </div>
+                <div class="flex items-center gap-2 text-[12px] text-[#d8d2b9]">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5 text-[#B68D2E]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Đủ dung tích</span>
+                </div>
+                <div class="flex items-center gap-2 text-[12px] text-[#d8d2b9]">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5 text-[#B68D2E]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>CK tốt theo SL</span>
+                </div>
+              </div>
+            </div>
+            <a
+              href="#lien-he"
+              class="mt-5 w-full h-10 rounded-full bg-[#232115] border border-[#B68D2E]/20 text-[#D4AA4A] text-[12px] font-bold uppercase tracking-wide group-hover:bg-[#2a2618] group-hover:border-[#B68D2E]/40 transition flex items-center justify-center"
+            >
+              Báo giá nhóm này
+            </a>
+          </div>
+
+          <!-- Card 3: 46340 Thuốc lá -->
+          <div class="group rounded-[22px] bg-[#17150e] border border-[#B68D2E]/15 p-5 hover:-translate-y-1 hover:border-[#B68D2E]/35 hover:shadow-[0_20px_50px_rgba(182,141,46,0.12)] transition-all flex flex-col justify-between">
+            <div>
+              <div class="flex items-start justify-between">
+                <div class="h-12 w-12 rounded-[14px] bg-[#1f1d13] border border-[#B68D2E]/20 grid place-items-center text-[#B68D2E]">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18 12H2v4h16"></path>
+                    <path d="M22 12v4"></path>
+                    <path d="M7 12v4"></path>
+                    <path d="M18 8c0-2.5-2-2.5-2-5"></path>
+                    <path d="M22 8c0-2.5-2-2.5-2-5"></path>
+                  </svg>
+                </div>
+                <span class="rounded-full bg-[#B68D2E] text-white text-[10px] font-black tracking-[0.14em] px-2.5 py-1">46340</span>
+              </div>
+              <div class="mt-5 font-extrabold text-[15px] leading-[1.2] uppercase tracking-wide text-white">
+                Thuốc lá &amp; Thuốc lào
+              </div>
+              <div class="mt-2 text-[13px] leading-[1.6] text-[#a8a391]">
+                Bán buôn sản phẩm thuốc lá theo quy định, có hóa đơn VAT.
+              </div>
+              <div class="mt-4 space-y-2">
+                <div class="flex items-center gap-2 text-[12px] text-[#d8d2b9]">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5 text-[#B68D2E]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Nguồn hợp pháp</span>
+                </div>
+                <div class="flex items-center gap-2 text-[12px] text-[#d8d2b9]">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5 text-[#B68D2E]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Đủ giấy tờ</span>
+                </div>
+                <div class="flex items-center gap-2 text-[12px] text-[#d8d2b9]">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5 text-[#B68D2E]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Giao kín đáo</span>
+                </div>
+              </div>
+            </div>
+            <a
+              href="#lien-he"
+              class="mt-5 w-full h-10 rounded-full bg-[#232115] border border-[#B68D2E]/20 text-[#D4AA4A] text-[12px] font-bold uppercase tracking-wide group-hover:bg-[#2a2618] group-hover:border-[#B68D2E]/40 transition flex items-center justify-center"
+            >
+              Báo giá nhóm này
+            </a>
+          </div>
+
+          <!-- Card 4: Logistics Dịch vụ bán buôn -->
+          <div class="group rounded-[22px] bg-[#17150e] border border-[#B68D2E]/15 p-5 hover:-translate-y-1 hover:border-[#B68D2E]/35 hover:shadow-[0_20px_50px_rgba(182,141,46,0.12)] transition-all flex flex-col justify-between">
+            <div>
+              <div class="flex items-start justify-between">
+                <div class="h-12 w-12 rounded-[14px] bg-[#1f1d13] border border-[#B68D2E]/20 grid place-items-center text-[#B68D2E]">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"></path>
+                    <path d="M15 18H9"></path>
+                    <path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"></path>
+                    <circle cx="17" cy="18" r="2"></circle>
+                    <circle cx="7" cy="18" r="2"></circle>
+                  </svg>
+                </div>
+                <span class="rounded-full bg-[#B68D2E] text-white text-[10px] font-black tracking-[0.14em] px-2.5 py-1">LOGISTICS</span>
+              </div>
+              <div class="mt-5 font-extrabold text-[15px] leading-[1.2] uppercase tracking-wide text-white">
+                Dịch vụ bán buôn &amp; Giao hàng
+              </div>
+              <div class="mt-2 text-[13px] leading-[1.6] text-[#a8a391]">
+                Xe tải phủ sóng Đồng Nai, giao tận nơi, hỗ trợ xuất hóa đơn VAT.
+              </div>
+              <div class="mt-4 space-y-2">
+                <div class="flex items-center gap-2 text-[12px] text-[#d8d2b9]">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5 text-[#B68D2E]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Kho Phước Hòa</span>
+                </div>
+                <div class="flex items-center gap-2 text-[12px] text-[#d8d2b9]">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5 text-[#B68D2E]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Đội xe riêng</span>
+                </div>
+                <div class="flex items-center gap-2 text-[12px] text-[#d8d2b9]">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5 text-[#B68D2E]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Xuất VAT MST 3603823707</span>
+                </div>
+              </div>
+            </div>
+            <a
+              href="#lien-he"
+              class="mt-5 w-full h-10 rounded-full bg-[#232115] border border-[#B68D2E]/20 text-[#D4AA4A] text-[12px] font-bold uppercase tracking-wide group-hover:bg-[#2a2618] group-hover:border-[#B68D2E]/40 transition flex items-center justify-center"
+            >
+              Báo giá nhóm này
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: NĂNG LỰC & ĐỐI TÁC (#nang-luc) -->
+    <section id="nang-luc" class="mx-auto max-w-[1240px] px-4 sm:px-6 lg:px-8 py-14 lg:py-20 bg-white">
+      <!-- Upper part: Infrastructure Grid -->
+      <div class="grid lg:grid-cols-[0.9fr_1.1fr] gap-10 items-center">
+        <div>
+          <div class="inline-flex items-center gap-2 rounded-full bg-[#fdf6de] border border-[#e8d9a8] px-3 py-1 text-[11px] font-bold uppercase tracking-[0.14em] text-[#8C6B1F]">
+            <img
+              src="/brand/ref-fA.png"
+              alt=""
+              aria-hidden="true"
+              class="h-4 w-auto object-contain"
+            />
+            <span>Năng lực phân phối</span>
+          </div>
+
+          <h2 class="mt-4 text-[30px] lg:text-[40px] font-black leading-[0.95] uppercase tracking-[-0.02em] text-[#1a1a1a]">
+            Hạ tầng B2B <br />sẵn sàng cho <br />
+            <span class="gold-text-gradient">đơn lớn &amp; gấp</span>
+          </h2>
+
+          <p class="mt-4 text-[14px] leading-[1.7] text-[#6b6b6b] max-w-[420px]">
+            Kho tại Phước Hòa, xe tải riêng, phủ sóng Long Phước, Long Thành, Nhơn Trạch, Biên Hòa. Quy trình xuất nhập - hóa đơn minh bạch theo MST <b class="text-[#B68D2E]">3603823707</b>.
+          </p>
+        </div>
+
+        <!-- 4 Grid Capabilities -->
+        <div class="grid sm:grid-cols-2 gap-4">
+          <div class="rounded-[20px] border border-[#ece6d3] bg-white p-6 hover:-translate-y-1 hover:shadow-[0_16px_36px_rgba(182,141,46,0.10)] hover:border-[#B68D2E]/30 transition-all">
+            <div class="flex items-center gap-3">
+              <div class="h-10 w-10 rounded-full bg-[#0e0e0e] text-[#B68D2E] grid place-items-center border border-[#B68D2E]/20 shrink-0">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 8.35V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8.35A2 2 0 0 1 3.26 6.5l8-3.2a2 2 0 0 1 1.48 0l8 3.2A2 2 0 0 1 22 8.35Z"></path><path d="M6 18h12"></path><path d="M6 14h12"></path><rect width="12" height="12" x="6" y="10"></rect></svg>
+              </div>
+              <div class="text-[20px] font-black tracking-tight text-[#1a1a1a]">&gt;1000m²</div>
+            </div>
+            <div class="mt-4 font-bold text-[14px] uppercase tracking-wide text-[#1a1a1a]">Kho hàng tại Phước Hòa</div>
+            <div class="mt-1 text-[12.5px] leading-[1.6] text-[#6b6b6b]">Kệ cao, phân loại theo hãng, quản lý tồn kho theo ngày.</div>
+          </div>
+
+          <div class="rounded-[20px] border border-[#ece6d3] bg-white p-6 hover:-translate-y-1 hover:shadow-[0_16px_36px_rgba(182,141,46,0.10)] hover:border-[#B68D2E]/30 transition-all">
+            <div class="flex items-center gap-3">
+              <div class="h-10 w-10 rounded-full bg-[#0e0e0e] text-[#B68D2E] grid place-items-center border border-[#B68D2E]/20 shrink-0">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"></path><path d="M15 18H9"></path><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"></path><circle cx="17" cy="18" r="2"></circle><circle cx="7" cy="18" r="2"></circle></svg>
+              </div>
+              <div class="text-[20px] font-black tracking-tight text-[#1a1a1a]">6+</div>
+            </div>
+            <div class="mt-4 font-bold text-[14px] uppercase tracking-wide text-[#1a1a1a]">Đội xe giao hàng</div>
+            <div class="mt-1 text-[12.5px] leading-[1.6] text-[#6b6b6b]">Xe tải 1-3.5 tấn, giao 24/7, kể cả Chủ nhật &amp; Lễ.</div>
+          </div>
+
+          <div class="rounded-[20px] border border-[#ece6d3] bg-white p-6 hover:-translate-y-1 hover:shadow-[0_16px_36px_rgba(182,141,46,0.10)] hover:border-[#B68D2E]/30 transition-all">
+            <div class="flex items-center gap-3">
+              <div class="h-10 w-10 rounded-full bg-[#0e0e0e] text-[#B68D2E] grid place-items-center border border-[#B68D2E]/20 shrink-0">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              </div>
+              <div class="text-[20px] font-black tracking-tight text-[#1a1a1a]">Toàn Đồng Nai</div>
+            </div>
+            <div class="mt-4 font-bold text-[14px] uppercase tracking-wide text-[#1a1a1a]">Phủ sóng</div>
+            <div class="mt-1 text-[12.5px] leading-[1.6] text-[#6b6b6b]">Tập trung Long Thành - Nhơn Trạch - Biên Hòa, giao trong ngày.</div>
+          </div>
+
+          <div class="rounded-[20px] border border-[#ece6d3] bg-white p-6 hover:-translate-y-1 hover:shadow-[0_16px_36px_rgba(182,141,46,0.10)] hover:border-[#B68D2E]/30 transition-all">
+            <div class="flex items-center gap-3">
+              <div class="h-10 w-10 rounded-full bg-[#0e0e0e] text-[#B68D2E] grid place-items-center border border-[#B68D2E]/20 shrink-0">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m7.5 4.27 9 5.15"></path><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"></path><path d="m3.3 7 8.7 5 8.7-5"></path><path d="M12 22V12"></path></svg>
+              </div>
+              <div class="text-[20px] font-black tracking-tight text-[#1a1a1a]">OMS</div>
+            </div>
+            <div class="mt-4 font-bold text-[14px] uppercase tracking-wide text-[#1a1a1a]">Quản lý đơn hàng</div>
+            <div class="mt-1 text-[12.5px] leading-[1.6] text-[#6b6b6b]">Tiếp nhận qua điện thoại, Zalo, form web, xác nhận nhanh.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Lower part: Partner Brands & Quality Pledges -->
+      <div class="mt-12 lg:mt-16 rounded-[28px] border border-[#ece6d3] bg-[#fdfbf3] p-6 lg:p-8">
+        <div class="flex flex-wrap items-center justify-between gap-6">
+          <div class="text-[13px] font-bold uppercase tracking-[0.16em] text-[#8C6B1F] flex items-center gap-2">
+            <img
+              src="/brand/ref-fA.png"
+              alt=""
+              aria-hidden="true"
+              class="h-5 w-auto"
+            />
+            <span>Đối tác &amp; Hãng phân phối</span>
+          </div>
+
+          <!-- Brand pills -->
+          <div class="flex flex-wrap gap-2">
+            {['HEINEKEN', 'TIGER', 'SAIGON', '333', 'BUDWEISER', 'LARUE', 'COCA-COLA', 'PEPSI', 'REDBULL'].map((brand) => (
+              <div class="h-9 rounded-full border border-[#e8d9a8] bg-white px-4 grid place-items-center text-[11px] font-black tracking-[0.12em] text-[#1a1a1a] hover:border-[#B68D2E] transition-colors">
+                {brand}
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div class="mt-6 grid sm:grid-cols-2 lg:grid-cols-4 gap-3">
+          <div class="flex items-center gap-2 rounded-full bg-white border border-[#ece6d3] px-4 py-3 text-[12px] font-bold text-[#1a1a1a]">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-[#B68D2E]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"></path><path d="m9 12 2 2 4-4"></path></svg>
+            <span>Hàng chính hãng 100%</span>
+          </div>
+          <div class="flex items-center gap-2 rounded-full bg-white border border-[#ece6d3] px-4 py-3 text-[12px] font-bold text-[#1a1a1a]">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-[#B68D2E]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"></path><path d="m9 12 2 2 4-4"></path></svg>
+            <span>Giá sỉ tốt cho đại lý</span>
+          </div>
+          <div class="flex items-center gap-2 rounded-full bg-white border border-[#ece6d3] px-4 py-3 text-[12px] font-bold text-[#1a1a1a]">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-[#B68D2E]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"></path><path d="m9 12 2 2 4-4"></path></svg>
+            <span>Hóa đơn VAT đầy đủ</span>
+          </div>
+          <div class="flex items-center gap-2 rounded-full bg-white border border-[#ece6d3] px-4 py-3 text-[12px] font-bold text-[#1a1a1a]">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-[#B68D2E]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"></path><path d="m9 12 2 2 4-4"></path></svg>
+            <span>Đổi trả nếu lỗi NSX</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: LIÊN HỆ & FORM BÁO GIÁ (#lien-he) -->
+    <section id="lien-he" class="bg-[#0E0E0E] text-white border-t border-[#1e1c14] relative overflow-hidden">
+      <!-- Watermark logo -->
+      <div class="absolute top-0 left-1/2 -translate-x-1/2 opacity-[0.03] pointer-events-none">
+        <img
+          src="/brand/ref-fA.png"
+          alt=""
+          aria-hidden="true"
+          class="h-[600px] w-auto"
+        />
+      </div>
+
+      <div class="mx-auto max-w-[1240px] px-4 sm:px-6 lg:px-8 py-14 lg:py-20 grid lg:grid-cols-[1.05fr_0.95fr] gap-10 relative">
+        <!-- Left: Form Báo Giá Sỉ -->
+        <div class="rounded-[28px] bg-[#15130e] border border-[#B68D2E]/15 p-6 lg:p-8 shadow-[0_0_0_1px_rgba(182,141,46,0.05)]">
+          <div class="flex items-center gap-2 text-[#D4AA4A] text-[11px] font-bold uppercase tracking-[0.16em]">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-[#B68D2E]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="m11 17 2 2a1 1 0 0 0 1.42 0l6.59-6.59a1 1 0 0 0 0-1.41l-2-2a1 1 0 0 0-1.41 0L11 15.58"></path>
+              <path d="m18 10 3-3a2 2 0 0 0 0-2.83l-1.17-1.17a2 2 0 0 0-2.83 0l-3 3"></path>
+              <path d="M14 6 8.7 11.3a1 1 0 0 0-.3.7v2a1 1 0 0 0 1 1h2a1 1 0 0 0 .7-.3L17.4 9.4"></path>
+            </svg>
+            <span>Liên hệ &amp; Báo giá sỉ</span>
+          </div>
+
+          <h3 class="mt-3 text-[26px] lg:text-[32px] font-black leading-[0.95] uppercase">
+            Gửi yêu cầu <br />báo giá nhanh
+          </h3>
+
+          <p class="mt-3 text-[13px] leading-[1.6] text-[#a8a391]">
+            Điền form, chúng tôi gọi lại trong 30 phút (7:00-19:00). Xuất hóa đơn VAT theo MST <span class="text-[#B68D2E] font-bold">3603823707</span>.
+          </p>
+
+          <form id="ltb-quote-form" class="mt-6 space-y-4">
+            <div class="grid sm:grid-cols-2 gap-4">
+              <label class="block">
+                <span class="text-[11px] uppercase tracking-[0.14em] font-bold text-[#c9c2ab]">Tên đại lý / Người liên hệ *</span>
+                <input
+                  type="text"
+                  id="quote-name"
+                  required
+                  placeholder="VD: Quán Hùng - Long Phước"
+                  class="mt-2 w-full h-11 rounded-full bg-[#1e1c13] border border-[#B68D2E]/20 px-4 text-[13px] outline-none focus:border-[#B68D2E] placeholder:text-[#6d695a] text-white"
+                />
+              </label>
+
+              <label class="block">
+                <span class="text-[11px] uppercase tracking-[0.14em] font-bold text-[#c9c2ab]">Số điện thoại *</span>
+                <input
+                  type="tel"
+                  id="quote-phone"
+                  required
+                  placeholder="0988 087 806"
+                  class="mt-2 w-full h-11 rounded-full bg-[#1e1c13] border border-[#B68D2E]/20 px-4 text-[13px] outline-none focus:border-[#B68D2E] placeholder:text-[#6d695a] text-white"
+                />
+              </label>
+            </div>
+
+            <div class="grid sm:grid-cols-2 gap-4">
+              <label class="block">
+                <span class="text-[11px] uppercase tracking-[0.14em] font-bold text-[#c9c2ab]">Loại hàng cần báo giá</span>
+                <select
+                  id="quote-type"
+                  class="mt-2 w-full h-11 rounded-full bg-[#1e1c13] border border-[#B68D2E]/20 px-4 text-[13px] outline-none focus:border-[#B68D2E] text-white"
+                >
+                  <option value="Bia - Đồ uống có cồn">Bia - Đồ uống có cồn</option>
+                  <option value="Nước ngọt - Không cồn">Nước ngọt - Không cồn</option>
+                  <option value="Thuốc lá">Thuốc lá</option>
+                  <option value="Tất cả danh mục">Tất cả danh mục</option>
+                </select>
+              </label>
+
+              <label class="block">
+                <span class="text-[11px] uppercase tracking-[0.14em] font-bold text-[#c9c2ab]">Số lượng ước tính</span>
+                <input
+                  type="text"
+                  id="quote-qty"
+                  placeholder="VD: 50 thùng Tiger"
+                  class="mt-2 w-full h-11 rounded-full bg-[#1e1c13] border border-[#B68D2E]/20 px-4 text-[13px] outline-none focus:border-[#B68D2E] placeholder:text-[#6d695a] text-white"
+                />
+              </label>
+            </div>
+
+            <label class="block">
+              <span class="text-[11px] uppercase tracking-[0.14em] font-bold text-[#c9c2ab]">Ghi chú thêm</span>
+              <textarea
+                id="quote-note"
+                rows="3"
+                placeholder="Địa chỉ giao, yêu cầu hóa đơn VAT, thời gian giao..."
+                class="mt-2 w-full rounded-[18px] bg-[#1e1c13] border border-[#B68D2E]/20 p-4 text-[13px] outline-none focus:border-[#B68D2E] placeholder:text-[#6d695a] resize-none text-white"
+              ></textarea>
+            </label>
+
+            <button
+              type="submit"
+              class="w-full h-[48px] rounded-full bg-[linear-gradient(102deg,#B68D2E_0%,#8C6B1F_100%)] text-white font-black uppercase tracking-wide text-[13px] shadow-[0_12px_28px_rgba(182,141,46,0.35)] hover:brightness-110 hover:shadow-[0_16px_36px_rgba(182,141,46,0.45)] transition-all flex items-center justify-center cursor-pointer"
+            >
+              Gửi yêu cầu báo giá
+            </button>
+
+            <!-- Status banner after submit -->
+            <div id="quote-status" class="hidden rounded-[14px] bg-[#1f1d13] border border-[#B68D2E] p-4 text-[12px] leading-[1.6] text-[#d8d2b9]"></div>
+
+            <div class="rounded-[14px] bg-[#1f1d13] border border-[#B68D2E]/15 px-4 py-3 text-[11px] leading-[1.6] text-[#b8b29c]">
+              ⚠️ Cảnh báo: Xuất hóa đơn VAT theo MST <b class="text-[#D4AA4A]">3603823707 - CÔNG TY TNHH BIA LONG THÀNH</b>. Vui lòng kiểm tra kỹ thông tin công ty trước khi chuyển khoản.
+            </div>
+          </form>
+        </div>
+
+        <!-- Right: Legal Corporate Info, Actions & Google Map -->
+        <div class="space-y-4">
+          <div class="rounded-[28px] bg-[#fdfbf3] text-[#0e0e0e] border border-[#ece6d3] p-6 lg:p-8 shadow-[0_8px_32px_rgba(0,0,0,0.2)]">
+            <!-- Header inside card -->
+            <div class="flex items-center gap-3">
+              <div class="h-12 w-12 rounded-[12px] bg-white border border-[#B68D2E]/30 grid place-items-center overflow-hidden p-1 shadow-[0_2px_8px_rgba(182,141,46,0.15)] shrink-0">
+                <img
+                  src="/brand/ref-fA.png"
+                  alt=""
+                  aria-hidden="true"
+                  class="h-10 w-auto object-contain logo-gold-shadow"
+                />
+              </div>
+              <div>
+                <div class="font-black tracking-tight text-[#1a1a1a]">CÔNG TY TNHH BIA LONG THÀNH</div>
+                <div class="text-[11px] uppercase tracking-[0.16em] text-[#B68D2E] font-bold">LONG THANH BEER COMPANY LIMITED</div>
+              </div>
+            </div>
+
+            <!-- List details -->
+            <div class="mt-6 space-y-4 text-[13px] leading-[1.6]">
+              <div class="flex gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#B68D2E] shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                <span>
+                  <b>Địa chỉ (sau sáp nhập):</b><br />
+                  1401/2, tổ 17, ấp Phước Hòa, Xã Long Phước, Tỉnh Đồng Nai, Việt Nam<br />
+                  <span class="text-[11px] text-[#8C6B1F] font-bold">Đã cập nhật Xã/phường, Tỉnh/Thành phố mới theo sáp nhập 2025</span>
+                </span>
+              </div>
+
+              <div class="flex gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#B68D2E] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path>
+                  <path d="M14 2v4a2 2 0 0 0 2 2h4"></path>
+                </svg>
+                <span>
+                  <b>MST:</b> 3603823707 - Ngày cấp: 19/08/2021<br />
+                  <b>Viết tắt:</b> LTB
+                </span>
+              </div>
+
+              <div class="flex gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#B68D2E] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"></path>
+                  <path d="m9 12 2 2 4-4"></path>
+                </svg>
+                <span><b>Người đại diện:</b> HOÀNG XUÂN DŨNG</span>
+              </div>
+
+              <div class="flex gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#B68D2E] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+                <span><b>Giờ mở cửa:</b> 7:00 - 19:00 (T2 - CN)</span>
+              </div>
+            </div>
+
+            <!-- Hotline & Chat Zalo Quick Actions -->
+            <div class="mt-6 grid grid-cols-2 gap-3">
+              <a
+                href={`tel:${SITE.hotlineTel}`}
+                class="h-12 rounded-full bg-[#0e0e0e] text-[#D4AA4A] font-bold text-[13px] flex items-center justify-center gap-2 border border-[#B68D2E]/20 hover:border-[#B68D2E]/40 transition-colors"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-[#B68D2E]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+                <span>{SITE.hotline}</span>
+              </a>
+
+              <a
+                href={SITE.zaloUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="h-12 rounded-full bg-[linear-gradient(102deg,#B68D2E_0%,#8C6B1F_100%)] text-white font-bold text-[13px] flex items-center justify-center gap-2 shadow-[0_6px_16px_rgba(182,141,46,0.3)] hover:brightness-110 transition-all"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="m3 21 1.9-5.7a8.5 8.5 0 1 1 3.8 3.8z"></path>
+                </svg>
+                <span>Chat Zalo</span>
+              </a>
+            </div>
+
+            <!-- Embedded Google Map -->
+            <div class="mt-6 rounded-[18px] overflow-hidden border border-[#e8d9a8] bg-[#fdf6de] relative">
+              <div class="flex items-center gap-2 px-4 py-2 text-[11px] font-bold uppercase tracking-wide text-[#8C6B1F] bg-[#fdf6de] border-b border-[#e8d9a8]">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-[#B68D2E]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                <span>1401/2 Phước Hòa, Long Phước, Đồng Nai</span>
+              </div>
+              <iframe
+                title="Bản đồ Công ty TNHH Bia Long Thành"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10.85546779632568!2d107.0051845799013!3d10.7129900796742!2m3!1f169.46036!2f90!3f0!3m2!1i1024!2i768!4f75!3m3!1m2!1s0x317519783a17b183%3A0x2c19865068a4c052!2sC%C3%94NG%20TY%20TNHH%20BIA%20LONG%20TH%C3%80NH!5e0!3m2!1svi!2s!4v1792023503147!5m2!1svi!2s"
+                class="block w-full h-[300px] border-0"
+                style="border: 0;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="strict-origin-when-cross-origin"
+              ></iframe>
+            </div>
+          </div>
+
+          <!-- Bottom Card: Invoice Note -->
+          <div class="rounded-[20px] border border-[#B68D2E]/15 bg-[#15130e] p-4 flex items-center gap-3 text-[12px] text-[#b8b29c]">
+            <div class="h-10 w-10 rounded-full bg-[#1f1d13] border border-[#B68D2E]/20 grid place-items-center overflow-hidden shrink-0">
+              <img
+                src="/brand/ref-fA.png"
+                alt=""
+                aria-hidden="true"
+                class="h-7 w-auto object-contain"
+              />
+            </div>
+            <div>
+              <div class="font-bold text-white">Thông tin xuất hóa đơn</div>
+              <div class="mt-1">
+                CÔNG TY TNHH BIA LONG THÀNH - MST 3603823707<br />
+                1401/2, tổ 17, ấp Phước Hòa, Xã Long Phước, Đồng Nai
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</PublicLayout>
+
+<style>
+  @media (max-width: 390px) {
+    h1 {
+      font-size: 28px !important;
+    }
+  }
+</style>
+
+<script>
+  // Form handling logic strictly complying with Business Rules
+  const form = document.getElementById('ltb-quote-form') as HTMLFormElement;
+  const statusBox = document.getElementById('quote-status');
+
+  form?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const name = (document.getElementById('quote-name') as HTMLInputElement)?.value.trim();
+    const phone = (document.getElementById('quote-phone') as HTMLInputElement)?.value.trim();
+    const type = (document.getElementById('quote-type') as HTMLSelectElement)?.value;
+    const qty = (document.getElementById('quote-qty') as HTMLInputElement)?.value.trim();
+    const note = (document.getElementById('quote-note') as HTMLTextAreaElement)?.value.trim();
+
+    if (!name || !phone) {
+      alert('Vui lòng nhập Tên và Số điện thoại để nhận báo giá sỉ.');
+      return;
+    }
+
+    if (statusBox) {
+      statusBox.innerHTML = `
+        <div class="font-bold text-[#D4AA4A] text-[13px] uppercase tracking-wide">✓ Đã tiếp nhận yêu cầu báo giá!</div>
+        <div class="mt-2 text-white"><b>Khách hàng:</b> ${name} - <b>SĐT:</b> ${phone}</div>
+        <div><b>Danh mục:</b> ${type} ${qty ? `(SL: ${qty})` : ''}</div>
+        <div class="mt-2 text-[#9ca3af]">Chúng tôi sẽ liên hệ lại trong 30 phút làm việc (7:00 - 19:00). Lưu ý: Đây là yêu cầu tiếp nhận báo giá, không đồng nghĩa với đơn hàng đã được xác nhận.</div>
+      `;
+      statusBox.classList.remove('hidden');
+    }
+
+    form.reset();
+  });
+</script>
